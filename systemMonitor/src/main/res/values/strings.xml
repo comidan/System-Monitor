@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">System Monitor</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Closed</string>
+    <string name="download">Download</string>
+    <string name="upload">Upload</string>
+    <string name="wifi_info">Wifi Network Information</string>
+    <string name="ip">IP Address</string>
+    <string name="mac">MAC Address</string>
+    <string name="bandwidth">Bandwidth</string>
+    <string name="mobile">Mobile</string>
+    <string name="mobile_info">Mobile Network Information</string>
+    <string name="mobile_msg">We could not automatically access to network options due to security standards in your smartphone, please change your mobile data status manually.</string>
+    <string name="mobile_on">Mobile data turned on</string>
+    <string name="mobile_off">Mobile data turned off</string>
+    <string name="isp">ISP</string>
+    <string name="bluetooth_info">Bluetooth Network Information</string>
+    <string name="b_device_name">Device Name</string>
+    <string name="b_visibility">Device Visibility</string>
+    <string name="gps">GPS Information</string>
+    <string name="gps_msg">You can view your position by clicking this as soon as you get your in-app position</string>
+    <string name="gps_msg_true">We could not automatically enable GPS due to security standards in your smartphone, please change your GPS status manually.</string>
+    <string name="gps_msg_false">We could not automatically disable GPS due to security standards in your smartphone, please change your GPS status manually.</string>
+    <string name="linking">Linking...</string>
+    <string name="no_link">No satellite link</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="altitude">Altitude</string>
+    <string name="speed">Speed</string>
+    <string name="precision">Precision</string>
+    <string name="satellites">Satellites</string>
+    <string name="total_ram">Total RAM</string>
+    <string name="available_ram">Available RAM</string>
+    <string name="used_ram">Used RAM</string>
+    <string name="free_ram">Free RAM</string>
+    <string name="internal_storage">Internal Storage</string>
+    <string name="external_storage">External Storage</string>
+    <string name="total_mem">Total Memory</string>
+    <string name="available_mem">Available Memory</string>
+    <string name="max_freq">Max Frequency</string>
+    <string name="min_freq">Min Frequency</string>
+    <string name="temperature">Temperature</string>
+    <string name="usage">Usage</string>
+    <string name="light">Light</string>
+    <string name="gravity">Gravity</string>
+    <string name="acceleration">Acceleration</string>
+    <string name="gyroscope">Gyroscope</string>
+    <string name="magnetic_field">Magnetic Field</string>
+    <string name="pressure">Pressure</string>
+    <string name="light_sens">Light Sensor</string>
+    <string name="pressure_sens">Pressure Sensor</string>
+    <string name="running_apps">Running Applications</string>
+    <string name="battery">Battery</string>
+    <string name="battery_info">Battery Information</string>
+    <string name="ba_power_source">Power Source</string>
+    <string name="ba_type">Type</string>
+    <string name="voltage">Voltage</string>
+    <string name="health">Health</string>
+    <string name="name">Name</string>
+    <string name="version">Version</string>
+    <string name="model">Model</string>
+    <string name="product">Product</string>
+    <string name="system">System</string>
+    <string name="sensor">Sensors</string>
+    <string name="x">X-Axis</string>
+    <string name="y">Y-Axis</string>
+    <string name="z">Z-Axis</string>
+    <string name="storage">Storage</string>
+    <string name="charge">Charge</string>
+    <string name="cold">Cold</string>
+    <string name="good">Good</string>
+    <string name="over_volt">Over Voltage</string>
+    <string name="over_heat">Overheat</string>
+    <string name="system_info">System Info</string>
+    <string name="unknown">Unknown</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="ram_msg">You can kill other processes to free your memory, a selection will made to keep important processes and services still alive.</string>
+    <string name="ram_cls">RAM cleared</string>
+    <string name="b_not_av">Not available</string>
+    <string name="b_not_vi">Not visible</string>
+    <string name="b_vi">Visible</string>
+    <string name="b_con">Connectable</string>
+    <string name="b_not_av_msg">Bluetooth adapter not available on your device</string>
+    <string name="b_err">Error while turning on/off bluetooth</string>
+    <string name="tut_wifi">Long click to turn on/off</string>
+    <string name="tut_apps">Swipe to see options</string>
+    <string name="tut_ram">Long click to get info</string>
+    <string name="wifi_on">WiFi enabled</string>
+    <string name="wifi_off">WiFi disabled</string>
+    <string name="wifi_not_conn">Not connected</string>
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >WiFi</item>
+        <item >Mobile</item>
+        <item >Bluetooth</item>
+        <item >GPS</item>
+        <item >RAM</item>
+        <item>@string/storage</item>
+        <item >CPU</item>
+        <item>@string/sensor</item>
+        <item>Apps</item>
+        <item>@string/battery</item>
+        <item>@string/system_info</item>
+    </string-array>
+    
+    <array name="nav_drawer_icons">
+        <item>@drawable/home</item>
+        <item>@drawable/wifi_ico</item>
+        <item>@drawable/mobile</item>
+        <item>@drawable/bluetooth</item>
+		<item>@drawable/gps</item>
+        <item>@drawable/ram</item>
+        <item>@drawable/storage</item>
+        <item>@drawable/cpu</item>
+        <item>@drawable/_sensors</item>
+        <item>@drawable/app</item>
+        <item>@drawable/battery</item>
+        <item>@drawable/system_info</item>
+    </array>
+    
+    <string name="desc_list_item_icon">Item Icon</string>
+
+</resources>

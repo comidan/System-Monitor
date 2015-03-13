@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+        >
+
+    <LinearLayout
+            android:id="@+id/back"
+            android:tag="back"
+            style="@style/ListBackContent"
+            >
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/example_row_b_action_1"
+                style="@style/ListButtonAction"
+                android:text="Close"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/example_row_b_action_2"
+                style="@style/ListButtonAction"
+                android:text="Settings"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/example_row_b_action_3"
+                style="@style/ListButtonAction"
+                android:text="Uninstall"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:id="@+id/front"
+            android:tag="front"
+            style="@style/ListFrontContent">
+
+        <ImageView
+                style="@style/ListImage"
+                android:id="@+id/example_row_iv_image"/>
+
+        <TextView
+            android:id="@+id/example_row_tv_title"
+            style="@style/ListTitle"
+            android:layout_width="90dip"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/example_row_iv_image" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/example_row_iv_image"
+                android:layout_below="@id/example_row_tv_title"
+                style="@style/ListDescription"
+                android:textSize="12dp"
+                android:id="@+id/example_row_tv_description"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/example_row_tv_title"
+            android:layout_alignBottom="@+id/example_row_tv_title"
+            android:layout_marginLeft="85dp"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/example_row_tv_title" />
+
+    </RelativeLayout>
+
+</FrameLayout>

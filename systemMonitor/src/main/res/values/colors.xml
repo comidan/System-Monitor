@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- STOCK_LIBRARY_COLOR (I'M NOT A DESIGNER SO...) -->
+<resources>
+    <color name="demo_title_section_textcolor">#2a84a5</color>
+    <color name="carddemo_googlenowbirth_title">@android:color/holo_blue_dark</color>
+    <color name="demo_purchase_normal">#ececec</color>
+    <color name="demo_purchase_pressed">#CC2A84A5</color>
+    <color name="demo_card_background_color1">#FFBB33</color>
+    <color name="demo_card_background_color2">#98CC00</color>
+    <color name="demo_card_background_color3">#A966CC</color>
+    <color name="demo_card_background_color4">#33B4E4</color>
+    <color name="demo_card_background_color5">#FF4343</color>
+    <color name="demo_card_header_birth_color">#707070</color>
+    <color name="demo_card_line_birth_color">#E5E5E5</color>
+    <color name="demo_card_line_weather_color">#E5E5E5</color>
+    <color name="demo_card_weather_city_color">#A4A4A4</color>
+    <color name="demo_card_weather_temperature_color">#868686</color>
+    <color name="demo_card_stock_negative">#FF4646</color>
+    <color name="demo_card_stock_positive">#29A426</color>
+    <color name="ldrawer_color">#FFFFFF</color>
+</resources>

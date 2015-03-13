@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SystemMonitor.iml" filepath="$PROJECT_DIR$/SystemMonitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cardLibrary/cardLibrary.iml" filepath="$PROJECT_DIR$/cardLibrary/cardLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changeLogLibrary/changeLogLibrary.iml" filepath="$PROJECT_DIR$/changeLogLibrary/changeLogLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/floatingActionButton/floatingActionButton.iml" filepath="$PROJECT_DIR$/floatingActionButton/floatingActionButton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/holoGraphLibrary/holoGraphLibrary.iml" filepath="$PROJECT_DIR$/holoGraphLibrary/holoGraphLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lDrawer/lDrawer.iml" filepath="$PROJECT_DIR$/lDrawer/lDrawer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/showcaseview/showcaseview.iml" filepath="$PROJECT_DIR$/showcaseview/showcaseview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swipelistview/swipelistview.iml" filepath="$PROJECT_DIR$/swipelistview/swipelistview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/systemMonitor/systemMonitor.iml" filepath="$PROJECT_DIR$/systemMonitor/systemMonitor.iml" />
+    </modules>
+  </component>
+</project>
+

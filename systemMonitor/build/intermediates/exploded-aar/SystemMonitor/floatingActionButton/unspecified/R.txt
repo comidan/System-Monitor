@@ -1,0 +1,1 @@
+int drawable ic_menu_delete 0x7f020000

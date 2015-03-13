@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\exploded-aar\SystemMonitor\cardLibrary\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="347d4fb902b40652d69c7df92e1ab8efd4daa678">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-c7477fa0699f6f89ddfac3ee9e490a5f19801d4b.jar" />
+    </item>
+    <item
+        jar="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\exploded-aar\SystemMonitor\floatingActionButton\unspecified\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-18e46f92824d9ee6d250acf7e20993e4c42122b1.jar" />
+    </item>
+    <item
+        jar="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\exploded-aar\SystemMonitor\floatingActionButton\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2f98300474ec891f0dcf45e999b725b09d9165cb">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-d6b82055b0c20e3010ae89d95d2333a10f38c969.jar" />
+    </item>
+    <item
+        jar="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-9113397cf1fbe30c7f421bb9e37cc617fa612aa9.jar" />
+    </item>
+    <item
+        jar="C:\Users\daniele\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\support-v4-19.1.0-86d89f707a9b15b4adbdb6170152b8037044a976.jar" />
+    </item>
+    <item
+        jar="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\exploded-aar\SystemMonitor\swipelistview\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="da261dc587b5e4b2f0194c96f9a7b34d6fb01be6">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-e2fa610765c9c0ec360f2cb310c793ecf987f7ef.jar" />
+    </item>
+    <item
+        jar="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\exploded-aar\SystemMonitor\holoGraphLibrary\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="34f984dc14631744cb5ce7685fdfb43cee807dfd">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-d685ccf91936e27727920dde1f161a61ba98bb5e.jar" />
+    </item>
+    <item
+        jar="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\exploded-aar\SystemMonitor\lDrawer\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6ec82efe595cd3ab8bc748b77f0810b7658d8406">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-12b101caddc7fae6692f2c416932f168b4acc38e.jar" />
+    </item>
+    <item
+        jar="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\exploded-aar\SystemMonitor\changeLogLibrary\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8781829b1b09da7f746434f508f1e01d60ae850f">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-e822ff5a46870a609f73f558a5f02c81fbe0e209.jar" />
+    </item>
+    <item
+        jar="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\exploded-aar\SystemMonitor\showcaseview\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3a4590b86fd7bf0c73e7916b31f3cbe2f92e2458">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-42f8b69589e3e65a576f2ccb1000395592f01f0e.jar" />
+    </item>
+    <item
+        jar="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\src\main\lib\GraphView-3.1.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5ae526f646cab07cb2f513854798bf98989e9c47">
+        <dex dex="D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\GraphView-3.1.4-7a915855c6c920052bf01ba025bdda4a5a277090.jar" />
+    </item>
+
+</items>

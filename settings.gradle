@@ -1,0 +1,8 @@
+include ':cardLibrary'
+include ':changeLogLibrary'
+include ':floatingActionButton'
+include ':holoGraphLibrary'
+include ':lDrawer'
+include ':showcaseview'
+include ':swipelistview'
+include ':systemMonitor'

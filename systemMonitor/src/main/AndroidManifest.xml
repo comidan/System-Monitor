@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dev.system.monitor"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="27"
+    android:versionName="1.5.4">
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+	<uses-feature android:name="android.hardware.location" android:required="false"/>
+	<uses-feature android:name="android.hardware.telephony" android:required="false"/>
+	<uses-feature android:name="android.hardware.wifi" android:required="false"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.UPDATE_DEVICE_STATS"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.BLUETOOTH"/>
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<compatible-screens>
+      	<screen android:screenSize="small" android:screenDensity="ldpi" />
+    	<screen android:screenSize="small" android:screenDensity="mdpi" />
+    	<screen android:screenSize="small" android:screenDensity="hdpi" />
+    	<screen android:screenSize="small" android:screenDensity="xhdpi" />
+    	<screen android:screenSize="small" android:screenDensity="480" />
+        <screen android:screenSize="small" android:screenDensity="560" />
+    	<screen android:screenSize="small" android:screenDensity="640" />
+    	<screen android:screenSize="normal" android:screenDensity="ldpi" />
+    	<screen android:screenSize="normal" android:screenDensity="mdpi" />
+    	<screen android:screenSize="normal" android:screenDensity="hdpi" />
+    	<screen android:screenSize="normal" android:screenDensity="xhdpi" />
+    	<screen android:screenSize="normal" android:screenDensity="480" />
+    	<screen android:screenSize="normal" android:screenDensity="560" />
+        <screen android:screenSize="normal" android:screenDensity="640" />
+    	<screen android:screenSize="large" android:screenDensity="ldpi" />
+    	<screen android:screenSize="large" android:screenDensity="mdpi" />
+    	<screen android:screenSize="large" android:screenDensity="hdpi" />
+    	<screen android:screenSize="large" android:screenDensity="xhdpi" />
+    	<screen android:screenSize="large" android:screenDensity="480" />
+    	<screen android:screenSize="large" android:screenDensity="560" />
+        <screen android:screenSize="large" android:screenDensity="640" />
+    	<screen android:screenSize="xlarge" android:screenDensity="ldpi" />
+    	<screen android:screenSize="xlarge" android:screenDensity="mdpi" />
+    	<screen android:screenSize="xlarge" android:screenDensity="hdpi" />
+    	<screen android:screenSize="xlarge" android:screenDensity="xhdpi" />
+    	<screen android:screenSize="xlarge" android:screenDensity="480" />
+    	<screen android:screenSize="xlarge" android:screenDensity="640" />
+        <screen android:screenSize="xlarge" android:screenDensity="560" /> <!--Nexus 6 DPI-->
+    	<screen android:screenSize="large" android:screenDensity="213" /> <!--Nexus 7 DPI-->
+    </compatible-screens>
+	
+	<supports-screens 
+	    android:smallScreens="true"
+	    android:normalScreens="true"
+	    android:largeScreens="true"
+	    android:xlargeScreens="true"
+	    android:anyDensity="true"/>
+
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21"
+        tools:overrideLibrary="com.faizmalkani.floatingactionbutton"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.dev.system.monitor.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dev.system.monitor.AppInfo"
+            android:label="Application Info"
+            android:screenOrientation="portrait">
+             <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+         </activity>
+        <receiver android:name="com.dev.system.monitor.RAMWidget"
+                  android:label="RAM">
+            <intent-filter> <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_ram_settings"/>
+        </receiver>
+        <receiver android:name="com.dev.system.monitor.CPUWidget"
+            android:label="CPU">
+            <intent-filter> <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_cpu_settings"/>
+        </receiver>
+        <receiver android:name="com.dev.system.monitor.BatteryWidget"
+            android:label="Battery">
+            <intent-filter> <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_battery_settings"/>
+        </receiver>
+        <receiver android:name="com.dev.system.monitor.WifiWidget"
+            android:label="WiFi">
+            <intent-filter> <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.dev.system.monitor.WifiWidget.ACTION_CHANGE_WIFI_STATUS"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_wifi_settings"/>
+        </receiver>
+        <receiver android:name="com.dev.system.monitor.MobileWidget"
+            android:label="Mobile Data">
+            <intent-filter> <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.dev.system.monitor.MobileWidget.ACTION_CHANGE_MOBILE_DATA_STATUS"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_mobile_settings"/>
+        </receiver>
+        <service android:name="com.dev.system.monitor.BatteryWidget$UpdateBattery"/>
+        <service android:name="com.dev.system.monitor.WifiWidget$NetworkLog"/>
+        <service android:name="com.dev.system.monitor.MobileWidget$MobileNetworkLog"/>
+    </application>
+</manifest>

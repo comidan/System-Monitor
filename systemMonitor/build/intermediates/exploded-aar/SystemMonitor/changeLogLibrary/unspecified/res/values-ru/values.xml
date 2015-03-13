@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/Users/Daniele/AndroidStudioProjects/SystemMonitor/changeLogLibrary/src/main/res/values-ru/strings.xml -->
+    <eat-comment/>
+    <string name="changelog_header_version">"Версия "</string>
+    <string name="changelog_internal_error_internet_connection">Нет соединения с интернетом. Невозможно получить список изменений.</string>
+    <string name="changelog_internal_error_parsing">Ошибка при парсинге файла</string>
+    <string name="changelog_row_bulletpoint">\u2022"</string>
+    <string name="changelog_row_prefix_bug">[b]Ошибка:[/b]</string>
+    <string name="changelog_row_prefix_improvement">[b]Добавлено:[/b]</string>
+</resources>

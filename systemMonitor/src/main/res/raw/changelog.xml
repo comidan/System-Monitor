@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog bulletedList="true">
+    <changelogversion versionName="1.5.4" changeDate="March 12, 2015">
+        <changelogtext>[font color=black]Improve RAM cleaning management[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.5.3" changeDate="March 6, 2015">
+        <changelogtext>[font color=black]Minor bug fixes[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.5.2" changeDate="Feb 1, 2015">
+        <changelogtext>[font color=black]Fixed RAM Widget crash[/font]</changelogtext>
+        <changelogtext>[font color=black]Bug fixes[/font]</changelogtext>
+        <changelogtext>[font color=black]Starting to add language support![/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.5.1" changeDate="Gen 22, 2015">
+        <changelogtext>[font color=black]Added SD path support for some specific devices[/font]</changelogtext>
+        <changelogtext>[font color=black]Added USB/HDD support (still improving)[/font]</changelogtext>
+        <changelogtext>[font color=black]Fixed SD Card reading which was displaying raw data[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.5" changeDate="Gen 19, 2015">
+        <changelogtext>[b][font color=black]New![/font][/b][br][font color=black]Added Sensors monitoring[/font][br]</changelogtext>
+        <changelogtext>[b][font color=black]New![/font][/b][br][font color=black]Added Storage and External Storage monitoring[/font][br]</changelogtext>
+        <changelogtext>[b][font color=black]New![/font][/b][br][font color=black]Added general current Android OS information[/font][br]</changelogtext>
+        <changelogtext>[font color=black]Minor bug fixes[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.4.3" changeDate="Gen 14, 2015">
+        <changelogtext>[font color=black]Added clean RAM button on widget too[/font]</changelogtext>
+        <changelogtext>[font color=black]Minor bug fixes[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.4.2" changeDate="Gen 11, 2015">
+        <changelogtext>[font color=black]Improved tasks filtering of tasks killer utility[/font]</changelogtext>
+        <changelogtext>[font color=black]Improved widgets performance[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.4.1" changeDate="Gen 5, 2015">
+        <changelogtext>[font color=black]Fixed Nexus 6 drawables support[/font]</changelogtext>
+        <changelogtext>[font color=black]Fixed CPU widget crash[/font]</changelogtext>
+        <changelogtext>[font color=black]Improved widgets performance[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.4" changeDate="Gen 3, 2015">
+        <changelogtext>[b][font color=black]New![/font][/b][br][font color=black]Widgets![/font][br]</changelogtext>
+        <changelogtext>[font color=black]Minor bug fixes[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.3.2" changeDate="Dec 20, 2014">
+        <changelogtext>[font color=black]Minor bug fixes[/font]</changelogtext>
+        <changelogtext>[font color=black]Fixed turning on/off mobile data on Android 5.0+[/font]</changelogtext>
+        <changelogtext>[font color=black]Sortable application list[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.3.1" changeDate="Dec 7, 2014">
+        <changelogtext>[font color=black]Improved GPS location[/font]</changelogtext>
+        <changelogtext>[font color=black]Fixed temperature read for octa-core devices[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.3" changeDate="Nov 23, 2014">
+        <changelogtext>[b][font color=black]New![/font][/b][br][font color=black]Added CPU Temperature monitoring for the most of devices[/font][br]</changelogtext>
+        <changelogtext>[font color=black]Fixed layout size on small screens[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.2.3" changeDate="Nov 1, 2014">
+        <changelogtext>[b][font color=black]New![/font][/b][br][font color=black]Octa Core CPU monitoring now supported[/font][br]</changelogtext>
+        <changelogtext>[font color=black]Android 5.0 Lollipop support[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.2.2" changeDate="Oct 23, 2014">
+        <changelogtext>[font color=black]Android 5.0 Lollipop support[/font]</changelogtext>
+        <changelogtext>[font color=black]Improved layout compatibility for some tablets[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.2.1" changeDate="Oct 22, 2014">
+        <changelogtext>[b][font color=black]New![/font][/b][br][font color=black]Android 5.0 Lollipop support[/font][br][font color=black]Added more Material Design features[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.2" changeDate="Oct 19, 2014">
+        <changelogtext>[b][font color=black]New![/font][/b][br][font color=black]Material Design![/font][br][font color=black]Adjusted battery fragment layout[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.1.4" changeDate="Sep 4, 2014">
+        <changelogtext>[font color=black]Fixed some bugs[/font]</changelogtext>
+        <changelogtext>[font color=black]Fixed some graphics issues[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.1.3" changeDate="Aug 25, 2014">
+        <changelogtext>[font color=black]Added support for ldpi devices and improved hdpi devices layout[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.1.2" changeDate="Aug 23, 2014">
+        <changelogtext>[font color=black]Improved card layouts for low density screen devices[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.1.1" changeDate="Aug 21, 2014">
+        <changelogtext>[font color=black]Improved cpu view layout for small screen devices[/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.1" changeDate="Aug 20, 2014">
+        <changelogtext>[b][font color=black]New![/font][/b][br][font color=black]Now displaying more battery info in its view![/font]</changelogtext>
+    </changelogversion>
+    <changelogversion versionName="1.0" changeDate="Aug 16, 2014">
+        <changelogtext>[b][font color=black]New![/font][/b][br][font color=black]Welcome to this first relase of System Monitor![/font]</changelogtext>
+        <changelogtext>[font color=black]Monitor your system![/font]</changelogtext>
+        <changelogtext>[font color=black]Control your apps![/font]</changelogtext>
+        <changelogtext>[font color=black]Control everything![/font]</changelogtext>
+    </changelogversion>
+</changelog>

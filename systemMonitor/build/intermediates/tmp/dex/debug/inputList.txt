@@ -1,0 +1,12 @@
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\classes\debug
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-d6b82055b0c20e3010ae89d95d2333a10f38c969.jar
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-12b101caddc7fae6692f2c416932f168b4acc38e.jar
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-e822ff5a46870a609f73f558a5f02c81fbe0e209.jar
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-e2fa610765c9c0ec360f2cb310c793ecf987f7ef.jar
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-42f8b69589e3e65a576f2ccb1000395592f01f0e.jar
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\GraphView-3.1.4-7a915855c6c920052bf01ba025bdda4a5a277090.jar
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-d685ccf91936e27727920dde1f161a61ba98bb5e.jar
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-18e46f92824d9ee6d250acf7e20993e4c42122b1.jar
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-c7477fa0699f6f89ddfac3ee9e490a5f19801d4b.jar
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\classes-9113397cf1fbe30c7f421bb9e37cc617fa612aa9.jar
+D:\Users\Daniele\AndroidStudioProjects\SystemMonitor\systemMonitor\build\intermediates\pre-dexed\debug\support-v4-19.1.0-86d89f707a9b15b4adbdb6170152b8037044a976.jar

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:gravity="center_vertical"
+              style="@style/card"
+              android:layout_width="match_parent"
+              android:layout_height="32dp">
+
+
+    <TextView
+        tools:text="Card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_header_inner_simple_title"
+        style="@style/card.header_simple_title"
+        />
+
+</LinearLayout>
+

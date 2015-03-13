@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+    <ScrollView
+        android:id="@+id/card_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:minHeight="100dp">
+
+            <ImageView
+                android:id="@+id/signalMobileImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:paddingTop="12dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+ 			<com.faizmalkani.floatingactionbutton.Fab
+ 			    android:id="@+id/fabbutton"
+ 			    android:layout_width="72dp"
+ 			    android:layout_height="72dp"
+ 			    android:layout_alignParentRight="true"
+ 			    android:layout_alignParentTop="true"
+ 			    android:layout_marginRight="1dp"
+ 			    android:layout_marginTop="1dp"/>
+
+       </RelativeLayout>  
+            <it.gmariotti.cardslib.library.view.CardView
+                android:id="@+id/card_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/card_scrollview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp">
+            </it.gmariotti.cardslib.library.view.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

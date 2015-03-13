@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Application Info" >
+        <Preference
+            android:key="app"
+            android:icon="@drawable/icon"
+            android:title="@string/app_name" >
+        </Preference>
+     </PreferenceCategory>
+     <PreferenceCategory android:title="Developer Info" >
+        <Preference
+            android:key="gplus"
+            android:icon="@drawable/gplus"
+            android:title="Follow me on Google +">
+        </Preference>
+        <Preference
+            android:key="facebook"
+            android:icon="@drawable/facebook"
+            android:title="Follow me on Facebook">
+        </Preference>
+        <Preference
+            android:key="twitter"
+            android:icon="@drawable/twitter"
+            android:title="Follow me on Twitter">
+        </Preference>
+     </PreferenceCategory>
+</PreferenceScreen>
