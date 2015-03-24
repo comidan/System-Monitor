@@ -139,16 +139,7 @@
         
     </LinearLayout>
     
-    <TextView 
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
-            android:text="Min frequency"
-            android:layout_below="@+id/textView9"
-            android:textColor="@color/black"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -173,16 +164,27 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
         android:layout_below="@+id/linearLayout7"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/linearLayout7"
         android:text="Max frequency"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/black" />
     <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Min frequency"
+        android:layout_alignLeft="@+id/linearLayout7"
+        android:layout_below="@+id/textView9"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_alignLeft="@+id/linearLayout7"
         android:layout_below="@+id/textView10"
         android:text="Temperature : "
         android:textAppearance="?android:attr/textAppearanceLarge"

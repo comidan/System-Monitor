@@ -31,26 +31,28 @@
         android:layout_centerHorizontal="true"
         android:indeterminateOnly="true" />
 
-	<TextView
-	    android:id="@+id/textView6"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignBottom="@+id/graph"
-	    android:layout_alignParentRight="true"
-	    android:textColor="@color/black"
-	    android:layout_marginRight="15dp"
-	    android:lines="2" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/graph"
+        android:layout_marginRight="17dp"
+        android:layout_above="@id/fabbutton"
+        android:layout_marginBottom="10dp"
+        android:lines="2"
+        android:textColor="@color/black" />
 
-	<TextView
-	    android:id="@+id/lat"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignLeft="@+id/core0"
-	    android:layout_alignParentTop="true"
-	    android:layout_marginTop="52dp"
-	    android:text="Total RAM "
-	    android:textColor="@color/black"
-	    android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/core0"
+        android:layout_above="@id/core0"
+        android:layout_marginBottom="40dp"
+        android:text="Total RAM "
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 	<com.faizmalkani.floatingactionbutton.Fab
 	    android:id="@+id/fabbutton"

@@ -139,26 +139,26 @@ public class SensorManagement extends Fragment implements SensorEventListener
         else if(event.sensor.getType()==Sensor.TYPE_ACCELEROMETER&&accelerometer!=null)
         {
             infoTextViews[2].get(0).setText(new DecimalFormat("#.##").format(event.values[0])+" m/s²");
-            infoTextViews[2].get(1).setText(new DecimalFormat("#.##").format(event.values[0])+" m/s²");
-            infoTextViews[2].get(2).setText(new DecimalFormat("#.##").format(event.values[0])+" m/s²");
+            infoTextViews[2].get(1).setText(new DecimalFormat("#.##").format(event.values[1])+" m/s²");
+            infoTextViews[2].get(2).setText(new DecimalFormat("#.##").format(event.values[2])+" m/s²");
         }
         else if(event.sensor.getType()==Sensor.TYPE_GRAVITY&&gravity!=null)
         {
             infoTextViews[1].get(0).setText(new DecimalFormat("#.##").format(event.values[0])+" m/s²");
-            infoTextViews[1].get(1).setText(new DecimalFormat("#.##").format(event.values[0])+" m/s²");
-            infoTextViews[1].get(2).setText(new DecimalFormat("#.##").format(event.values[0])+" m/s²");
+            infoTextViews[1].get(1).setText(new DecimalFormat("#.##").format(event.values[1])+" m/s²");
+            infoTextViews[1].get(2).setText(new DecimalFormat("#.##").format(event.values[2])+" m/s²");
         }
         else if(event.sensor.getType()==Sensor.TYPE_GYROSCOPE&&gyroscope!=null)
         {
             infoTextViews[3].get(0).setText(new DecimalFormat("#.##").format(event.values[0]) + " rad/s");
-            infoTextViews[3].get(1).setText(new DecimalFormat("#.##").format(event.values[0]) + " rad/s");
-            infoTextViews[3].get(2).setText(new DecimalFormat("#.##").format(event.values[0]) + " rad/s");
+            infoTextViews[3].get(1).setText(new DecimalFormat("#.##").format(event.values[1]) + " rad/s");
+            infoTextViews[3].get(2).setText(new DecimalFormat("#.##").format(event.values[2]) + " rad/s");
         }
         else if(event.sensor.getType()==Sensor.TYPE_MAGNETIC_FIELD&&magnetic_field!=null)
         {
             infoTextViews[4].get(0).setText(new DecimalFormat("#.##").format(event.values[0]) + " μT");
-            infoTextViews[4].get(1).setText(new DecimalFormat("#.##").format(event.values[0]) + " μT");
-            infoTextViews[4].get(2).setText(new DecimalFormat("#.##").format(event.values[0]) + " μT");
+            infoTextViews[4].get(1).setText(new DecimalFormat("#.##").format(event.values[1]) + " μT");
+            infoTextViews[4].get(2).setText(new DecimalFormat("#.##").format(event.values[2]) + " μT");
         }
         else if(event.sensor.getType()==Sensor.TYPE_PRESSURE&&pressure!=null)
             infoTextViews[5].get(0).setText(new DecimalFormat("#.##").format(event.values[0])+" hPa");

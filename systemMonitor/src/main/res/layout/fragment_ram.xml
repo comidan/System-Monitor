@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    			android:layout_width="match_parent"
-    			android:layout_height="match_parent"
-    			android:background="@color/app_background">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-	<TextView
-	    android:id="@+id/core0"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentLeft="true"
-	    android:layout_alignTop="@+id/graph"
-	    android:layout_marginLeft="20dp"
-	    android:textColor="@color/black"
-	    android:lines="2" />
+    <TextView
+        android:id="@+id/core0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/graph"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:lines="2" />
 
-	<com.echo.holographlibrary.PieGraph
-	    android:id="@+id/graph"
-	    android:layout_width="match_parent"
-	    android:layout_height="200dp"
-	    android:layout_alignParentLeft="true"
-	    android:layout_centerVertical="true" />
+    <com.echo.holographlibrary.PieGraph
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
 
-	<TextView
-	    android:id="@+id/lat"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignLeft="@+id/core0"
-	    android:layout_alignParentTop="true"
-	    android:layout_marginTop="52dp"
-	    android:text="Total RAM "
-	    android:textColor="@color/black"
-	    android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/core0"
+        android:layout_above="@id/core0"
+        android:layout_marginBottom="40dp"
+        android:text="Total RAM "
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-	<com.faizmalkani.floatingactionbutton.Fab
-	    android:id="@+id/fabbutton"
-	    android:layout_width="72dp"
-	    android:layout_height="72dp"
-	    android:layout_alignParentBottom="true"
-	    android:layout_alignParentRight="true"
-	    android:layout_marginBottom="17dp" />
+    <com.faizmalkani.floatingactionbutton.Fab
+        android:id="@+id/fabbutton"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="17dp" />
 
-	<TextView
-	    android:id="@+id/textView3"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_centerHorizontal="true"
-	    android:textColor="@color/black"
-	    android:layout_centerVertical="true" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_centerVertical="true" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"
@@ -59,14 +58,15 @@
         android:layout_centerHorizontal="true"
         android:indeterminateOnly="true" />
 
-	<TextView
-	    android:id="@+id/textView6"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentRight="true"
-	    android:layout_below="@+id/graph"
-	    android:layout_marginRight="17dp"
-	    android:lines="2"
-	    android:textColor="@color/black" />
-
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/graph"
+        android:layout_marginRight="17dp"
+        android:layout_above="@id/fabbutton"
+        android:layout_marginBottom="10dp"
+        android:lines="2"
+        android:textColor="@color/black" />
 </RelativeLayout>

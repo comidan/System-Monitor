@@ -9,13 +9,11 @@
  import android.content.Intent;
  import android.content.IntentFilter;
  import android.graphics.Bitmap;
- import android.graphics.BitmapFactory;
  import android.graphics.Canvas;
  import android.graphics.Color;
  import android.graphics.Paint;
  import android.graphics.Rect;
  import android.os.BatteryManager;
- import android.os.Build;
  import android.os.IBinder;
  import android.os.PowerManager;
  import android.view.animation.AccelerateDecelerateInterpolator;

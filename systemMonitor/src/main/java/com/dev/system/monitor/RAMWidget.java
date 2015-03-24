@@ -15,10 +15,8 @@ import android.graphics.Rect;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.PowerManager;
-import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.RemoteViews;
-import android.widget.TextView;
 import android.widget.Toast;
 import com.echo.holographlibrary.PieGraph;
 import com.echo.holographlibrary.PieSlice;
@@ -66,6 +64,8 @@ public class RAMWidget extends AppWidgetProvider
         super.onReceive(context,intent);
         if(!isCleaning&&intent.getAction().equals(ACTION_CLEAN_RAM))
         {
+            if(remoteViews==null)
+                remoteViews=new RemoteViews(context.getPackageName(),R.layout.widget_ram);
             isCleaning=true;
             new KillProcesses().execute();
         }
@@ -94,9 +94,14 @@ public class RAMWidget extends AppWidgetProvider
         }
 
             @Override
-            protected void onPostExecute (Void Void){
-                Toast.makeText(context, context.getString(R.string.ram_cls), Toast.LENGTH_LONG).show();
-                pg.removeSlices();
+            protected void onPostExecute (Void Void)
+            {
+                if(context!=null)
+                    Toast.makeText(context,context.getString(R.string.ram_cls),Toast.LENGTH_LONG).show();
+                if(pg!=null)
+                    pg.removeSlices();
+                else if(context!=null)
+                    pg=new PieGraph(context);
                 new DrawTask().execute();
             }
     }

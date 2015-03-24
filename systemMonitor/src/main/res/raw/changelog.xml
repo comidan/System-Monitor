@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="1.5.5" changeDate="March 24, 2015">
+        <changelogtext>[font color=black]Improved fragment layouts[/font]</changelogtext>
+        <changelogtext>[font color=black]Fixed sensor management bug[/font]</changelogtext>
+    </changelogversion>
     <changelogversion versionName="1.5.4" changeDate="March 12, 2015">
-        <changelogtext>[font color=black]Improve RAM cleaning management[/font]</changelogtext>
+        <changelogtext>[font color=black]Improved RAM cleaning management[/font]</changelogtext>
     </changelogversion>
     <changelogversion versionName="1.5.3" changeDate="March 6, 2015">
         <changelogtext>[font color=black]Minor bug fixes[/font]</changelogtext>

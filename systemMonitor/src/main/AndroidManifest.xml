@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dev.system.monitor"
     xmlns:tools="http://schemas.android.com/tools"
-    android:versionCode="27"
-    android:versionName="1.5.4">
+    android:versionCode="28"
+    android:versionName="1.5.5">
     <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
 	<uses-feature android:name="android.hardware.location" android:required="false"/>
 	<uses-feature android:name="android.hardware.telephony" android:required="false"/>
@@ -64,6 +64,7 @@
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21"
         tools:overrideLibrary="com.faizmalkani.floatingactionbutton"/>
+
     
     <application
         android:allowBackup="true"

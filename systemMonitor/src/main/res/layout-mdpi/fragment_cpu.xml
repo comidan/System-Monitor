@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_background">
@@ -81,37 +87,40 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="79dp"
-        android:text="Min frequency"
+        android:layout_alignLeft="@+id/linearLayout3"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_marginTop="10dp"
+        android:text="Max frequency"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/black" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView6"
-        android:layout_alignLeft="@+id/linearLayout3"
-        android:layout_marginBottom="17dp"
-        android:layout_marginLeft="18dp"
-        android:text="Max frequency"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="10dp"
+        android:text="Min frequency"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/black" />
+
+
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView6"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="39dp"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="10dp"
         android:text="Temperature : "
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/black" />
 
 </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>

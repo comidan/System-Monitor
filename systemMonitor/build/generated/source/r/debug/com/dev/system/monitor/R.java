@@ -1555,7 +1555,7 @@ containing a value of this type.
         public static final int submit_area=0x7f0b0044;
         public static final int tabMode=0x7f0b000b;
         public static final int textView1=0x7f0b006c;
-        public static final int textView10=0x7f0b0083;
+        public static final int textView10=0x7f0b0084;
         public static final int textView11=0x7f0b0085;
         public static final int textView2=0x7f0b0078;
         public static final int textView3=0x7f0b007a;
@@ -1564,7 +1564,7 @@ containing a value of this type.
         public static final int textView6=0x7f0b007b;
         public static final int textView7=0x7f0b007c;
         public static final int textView8=0x7f0b0082;
-        public static final int textView9=0x7f0b0084;
+        public static final int textView9=0x7f0b0083;
         public static final int title=0x7f0b0036;
         public static final int top_action_bar=0x7f0b002b;
         public static final int txtLabel=0x7f0b0088;
