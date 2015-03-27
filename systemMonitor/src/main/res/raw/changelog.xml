@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="1.5.6" changeDate="March 27, 2015">
+        <changelogtext>[font color=black]Added CPU Temperature monitoring support for more devices[/font]</changelogtext>
+        <changelogtext>[font color=black]Fixed bug which prevented RAM to be cleaned multiple times[/font]</changelogtext>
+        <changelogtext>[font color=black]Minor bug fixes[/font]</changelogtext>
+    </changelogversion>
     <changelogversion versionName="1.5.5" changeDate="March 24, 2015">
         <changelogtext>[font color=black]Improved fragment layouts[/font]</changelogtext>
         <changelogtext>[font color=black]Fixed sensor management bug[/font]</changelogtext>

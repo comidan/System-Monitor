@@ -39,21 +39,23 @@ public class CPUManagement extends Fragment
 	private Activity mainActivity,activityBackup;
 	private TextView[] cores_title;
 	private TextView min,max,cpu_temp;
-	private static final String[] cpu_temp_paths={"/sys/devices/system/cpu/cpu0/cpufreq/cpu_temp",
-											      "/sys/devices/system/cpu/cpu0/cpufreq/FakeShmoo_cpu_temp",
-											      "/sys/class/thermal/thermal_zone1/temp",
-    											  "/sys/class/i2c-adapter/i2c-4/4-004c/temperature",
-    											  "/sys/devices/platform/tegra-i2c.3/i2c-4/4-004c/temperature",
-    											  "/sys/devices/platform/omap/omap_temp_sensor.0/temperature",
-    											  "/sys/devices/platform/tegra_tmon/temp1_input",
-    						     				  "/sys/kernel/debug/tegra_thermal/temp_tj",
-    						     				  "/sys/devices/platform/s5p-tmu/temperature",
-    						     				  "/sys/class/thermal/thermal_zone0/temp",
-    						     				  "/sys/devices/virtual/thermal/thermal_zone0/temp",
-    						     				  "/sys/class/hwmon/hwmon0/device/temp1_input",
-    						     				  "/sys/devices/virtual/thermal/thermal_zone1/temp",
-    						     				  "/sys/devices/platform/s5p-tmu/curr_temp",
-    											  "/sys/htc/cpu_temp"};
+    private static final String[] cpu_temp_paths={"/sys/devices/system/cpu/cpu0/cpufreq/cpu_temp",
+                                                  "/sys/devices/system/cpu/cpu0/cpufreq/FakeShmoo_cpu_temp",
+                                                  "/sys/class/thermal/thermal_zone1/temp",
+                                                  "/sys/class/i2c-adapter/i2c-4/4-004c/temperature",
+                                                  "/sys/devices/platform/tegra-i2c.3/i2c-4/4-004c/temperature",
+                                                  "/sys/devices/platform/omap/omap_temp_sensor.0/temperature",
+                                                  "/sys/devices/platform/tegra_tmon/temp1_input",
+                                                  "/sys/kernel/debug/tegra_thermal/temp_tj",
+                                                  "/sys/devices/platform/s5p-tmu/temperature",
+                                                  "/sys/class/thermal/thermal_zone0/temp",
+                                                  "/sys/devices/virtual/thermal/thermal_zone0/temp",
+                                                  "/sys/class/hwmon/hwmon0/device/temp1_input",
+                                                  "/sys/devices/virtual/thermal/thermal_zone1/temp",
+                                                  "/sys/devices/platform/s5p-tmu/curr_temp",
+                                                  "/sys/htc/cpu_temp",
+                                                  "/sys/devices/platform/tegra-i2c.3/i2c-4/4-004c/ext_temperature",
+                                                  "/sys/devices/platform/tegra-tsensor/tsensor_temperature"};
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState)
@@ -403,6 +405,8 @@ public class CPUManagement extends Fragment
                           break;
                       }
                   cpu_temp = String.valueOf(tmp);
+                  if(cpu_temp.equals("")||cpu_temp.equals(" "))
+                      cpu_temp="40";
               }
           }
 			return null;
@@ -410,7 +414,7 @@ public class CPUManagement extends Fragment
 		
 		@Override
 		protected void onPostExecute(Void result) {
-            if(mainActivity!=null&&cpu_temp!=null)
+            if(mainActivity!=null&&cpu_temp!=null&&isAdded())
 			    CPUManagement.this.cpu_temp.setText(getString(R.string.temperature)+" : " + cpu_temp + " °C");
 			super.onPostExecute(result);
 		}

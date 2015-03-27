@@ -1,6 +1,7 @@
 package com.dev.system.monitor;
 
 import android.app.ActivityManager;
+import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -13,8 +14,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.AsyncTask;
-import android.os.Handler;
-import android.os.PowerManager;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.RemoteViews;
 import android.widget.Toast;
@@ -22,22 +21,24 @@ import com.echo.holographlibrary.PieGraph;
 import com.echo.holographlibrary.PieSlice;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.Calendar;
 import java.util.List;
 
 public class RAMWidget extends AppWidgetProvider
 {
-    private static final String ACTION_CLEAN_RAM="CLEAN_RAM";
+    public static final String ACTION_CLEAN_RAM="CLEAN_RAM";
+    public static final String ACTION_UPDATE_RAM="UPDATE_RAM";
 
     private static PieGraph pg;
     private static Context context;
     private static RemoteViews remoteViews;
     private static AppWidgetManager appWidgetManager;
     private static ComponentName widget;
-    private static Handler handler;
-    private static PowerManager mPower;
-    private static CustomRunnable runnable;
     private static Canvas canvas;
     private static boolean isCleaning;
+    private static Intent alarmIntent,clearIntent;
+    private static AlarmManager alarmManager;
+    private static PendingIntent pendingAlarm,pendingClean;
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds)
@@ -47,21 +48,29 @@ public class RAMWidget extends AppWidgetProvider
         remoteViews=new RemoteViews(context.getPackageName(),R.layout.widget_ram);
         isCleaning=false;
         widget=new ComponentName(context,RAMWidget.class);
-        mPower=(PowerManager)context.getSystemService(Context.POWER_SERVICE);
-        Intent intent=new Intent(context,RAMWidget.class);
-        intent.setAction(ACTION_CLEAN_RAM);
-        PendingIntent pendingIntent=PendingIntent.getBroadcast(context,0,intent,0);
-        remoteViews.setOnClickPendingIntent(R.id.widget_ram_clean,pendingIntent);
+        clearIntent=new Intent(context,RAMWidget.class);
+        clearIntent.setAction(ACTION_CLEAN_RAM);
+        pendingClean=PendingIntent.getBroadcast(context,0,clearIntent,0);
+        remoteViews.setOnClickPendingIntent(R.id.widget_ram_clean,pendingClean);
+        Calendar calendar=Calendar.getInstance();
+        calendar.add(Calendar.MILLISECOND,5000);
+        alarmIntent=new Intent(context,RAMWidget.class);
+        alarmIntent.setAction(ACTION_UPDATE_RAM);
+        pendingAlarm=PendingIntent.getBroadcast(context,0,alarmIntent,0);
+        alarmManager=(AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+        alarmManager.setRepeating(AlarmManager.RTC,calendar.getTimeInMillis(),5000,pendingAlarm);
         new DrawTask().execute();
-        handler=new Handler();
-        runnable=new CustomRunnable();
-        handler.postDelayed(runnable,3000);
+        appWidgetManager.updateAppWidget(widget,remoteViews);
     }
 
     @Override
     public void onReceive(Context context, Intent intent)
     {
         super.onReceive(context,intent);
+        this.context=context;
+        remoteViews=new RemoteViews(context.getPackageName(),R.layout.widget_ram);
+        widget=new ComponentName(context,RAMWidget.class);
+        appWidgetManager=AppWidgetManager.getInstance(context);
         if(!isCleaning&&intent.getAction().equals(ACTION_CLEAN_RAM))
         {
             if(remoteViews==null)
@@ -69,8 +78,11 @@ public class RAMWidget extends AppWidgetProvider
             isCleaning=true;
             new KillProcesses().execute();
         }
-
+        else if(intent.getAction().equals(ACTION_UPDATE_RAM))
+            if (remoteViews != null && appWidgetManager != null && context != null)
+                new DrawTask().execute();
     }
+
 
     private class KillProcesses extends AsyncTask<Void,Void,Void> {
 
@@ -78,64 +90,31 @@ public class RAMWidget extends AppWidgetProvider
         protected Void doInBackground(Void... params) {
             if (remoteViews == null || context == null || appWidgetManager == null)
                 return null;
-                ActivityManager activityManager = (ActivityManager) context.getApplicationContext().getSystemService("activity");
-                List<ActivityManager.RunningAppProcessInfo> procInfo = activityManager.getRunningAppProcesses();
-                for (int i = 0; i < procInfo.size(); i++) {
-                    ActivityManager.RunningAppProcessInfo process = procInfo.get(i);
-                    int importance = process.importance;
-                    String name = process.processName;
-                    if (!name.equals("com.dev.system.monitor") &&
-                            !name.contains("launcher") &&
-                            !name.contains("googlequicksearchbox") &&
-                            importance > ActivityManager.RunningAppProcessInfo.IMPORTANCE_VISIBLE)
-                        activityManager.killBackgroundProcesses(name);
-                }
+            ActivityManager activityManager = (ActivityManager) context.getApplicationContext().getSystemService("activity");
+            List<ActivityManager.RunningAppProcessInfo> procInfo = activityManager.getRunningAppProcesses();
+            for (int i = 0; i < procInfo.size(); i++) {
+                ActivityManager.RunningAppProcessInfo process = procInfo.get(i);
+                int importance = process.importance;
+                String name = process.processName;
+                if (!name.equals("com.dev.system.monitor") &&
+                        !name.contains("launcher") &&
+                        !name.contains("googlequicksearchbox") &&
+                        importance > ActivityManager.RunningAppProcessInfo.IMPORTANCE_VISIBLE)
+                    activityManager.killBackgroundProcesses(name);
+            }
             return null;
         }
 
-            @Override
-            protected void onPostExecute (Void Void)
-            {
-                if(context!=null)
-                    Toast.makeText(context,context.getString(R.string.ram_cls),Toast.LENGTH_LONG).show();
-                if(pg!=null)
-                    pg.removeSlices();
-                else if(context!=null)
-                    pg=new PieGraph(context);
-                new DrawTask().execute();
-            }
-    }
-
-    private class CustomRunnable implements Runnable
-    {
-        private boolean stop;
-
-        public CustomRunnable()
-        {
-            stop=false;
-        }
-
         @Override
-        public void run()
-        {
-            if(!stop&&remoteViews!=null&&appWidgetManager!=null&&context!=null)
-            {
-                if(mPower.isScreenOn())
-                {
-                    handler.removeCallbacks(this);
-                    new DrawTask().execute();
-                    handler.postDelayed(this,3000);
-                }
-                else
-                    handler.postDelayed(this,6000);
-            }
-             else
-                return;
-        }
-
-        void killThread()
-        {
-            stop=true;
+        protected void onPostExecute(Void Void) {
+            if (context != null)
+                Toast.makeText(context, context.getString(R.string.ram_cls), Toast.LENGTH_LONG).show();
+            if (pg != null)
+                pg.removeSlices();
+            else if (context != null)
+                pg = new PieGraph(context);
+            new DrawTask().execute();
+            isCleaning=false;
         }
     }
 
@@ -191,6 +170,8 @@ public class RAMWidget extends AppWidgetProvider
         {
             try
             {
+                if(pg==null)
+                    pg=new PieGraph(context);
                 pg.measure(200, 200);
                 pg.layout(0, 0, 200, 200);
                 pg.setDrawingCacheEnabled(true);
@@ -222,7 +203,7 @@ public class RAMWidget extends AppWidgetProvider
                     remoteViews.setTextViewText(R.id.widget_ram_text1,context.getString(R.string.free_ram)+" "+ free + " MB");
                     remoteViews.setTextViewText(R.id.widget_ram_text2,context.getString(R.string.used_ram)+" "+ + (total - free) + " MB");
                     remoteViews.setImageViewBitmap(R.id.graph_widget,bitmap);
-                    appWidgetManager.updateAppWidget(widget, remoteViews);
+                    appWidgetManager.updateAppWidget(widget,remoteViews);
                 }
             }
             catch(Exception exc)
@@ -234,10 +215,13 @@ public class RAMWidget extends AppWidgetProvider
 
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
-        if(runnable!=null)
-            runnable.killThread();
-        if(handler!=null&&runnable!=null)
-            handler.removeCallbacks(runnable);
+        try {
+            alarmManager.cancel(pendingAlarm);
+        }
+        catch(Exception exc)
+        {
+
+        }
         super.onDeleted(context, appWidgetIds);
     }
 }

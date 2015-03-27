@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dev.system.monitor"
     xmlns:tools="http://schemas.android.com/tools"
-    android:versionCode="28"
-    android:versionName="1.5.5">
+    android:versionCode="29"
+    android:versionName="1.5.6">
     <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
 	<uses-feature android:name="android.hardware.location" android:required="false"/>
 	<uses-feature android:name="android.hardware.telephony" android:required="false"/>
@@ -92,6 +92,8 @@
         <receiver android:name="com.dev.system.monitor.RAMWidget"
                   android:label="RAM">
             <intent-filter> <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                            <action android:name="com.dev.system.monitor.RAMWidget.ACTION_CLEAR_RAM"/>
+                            <action android:name="com.dev.system.monitor.RAMWidget.ACTION_UPDATE_RAM"/>
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_ram_settings"/>
         </receiver>

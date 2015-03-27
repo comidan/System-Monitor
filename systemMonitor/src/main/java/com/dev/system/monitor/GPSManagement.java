@@ -183,24 +183,26 @@ public class GPSManagement extends Fragment
         else
         {
           if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
-          { 
-        	info=new ArrayList<String>();
-	       	value=new ArrayList<String>();
-	        info.add(getString(R.string.latitude));
-	        value.add(getString(R.string.linking));
-	        info.add(getString(R.string.longitude));
-            value.add(getString(R.string.linking));
-	        info.add(getString(R.string.altitude));
-            value.add(getString(R.string.linking));
-	        info.add(getString(R.string.speed));
-            value.add(getString(R.string.linking));
-	        info.add(getString(R.string.precision));
-            value.add(getString(R.string.linking));
-	        info.add(getString(R.string.satellites));
-            value.add(getString(R.string.linking));
-	        if(card_update!=0)
-	        	initCard(info,value);
-	        card_update=0;
+          {
+              if(isAdded()) {
+                  info = new ArrayList<String>();
+                  value = new ArrayList<String>();
+                  info.add(getString(R.string.latitude));
+                  value.add(getString(R.string.linking));
+                  info.add(getString(R.string.longitude));
+                  value.add(getString(R.string.linking));
+                  info.add(getString(R.string.altitude));
+                  value.add(getString(R.string.linking));
+                  info.add(getString(R.string.speed));
+                  value.add(getString(R.string.linking));
+                  info.add(getString(R.string.precision));
+                  value.add(getString(R.string.linking));
+                  info.add(getString(R.string.satellites));
+                  value.add(getString(R.string.linking));
+                  if (card_update != 0)
+                      initCard(info, value);
+                  card_update = 0;
+              }
         	locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,2500,1,new LocationListener() {
 				
 				@Override
@@ -211,45 +213,48 @@ public class GPSManagement extends Fragment
 				
 				@Override
 				public void onProviderEnabled(String provider) {
-					
-					info=new ArrayList<String>();
-		       	    value=new ArrayList<String>();
-                    info.add(getString(R.string.latitude));
-                    value.add(getString(R.string.linking));
-                    info.add(getString(R.string.longitude));
-                    value.add(getString(R.string.linking));
-                    info.add(getString(R.string.altitude));
-                    value.add(getString(R.string.linking));
-                    info.add(getString(R.string.speed));
-                    value.add(getString(R.string.linking));
-                    info.add(getString(R.string.precision));
-                    value.add(getString(R.string.linking));
-                    info.add(getString(R.string.satellites));
-                    value.add(getString(R.string.linking));
-		             if(card_update!=1)
-		 	        	initCard(info,value);
-		 	        card_update=1;
+					if(isAdded()) {
+                        info = new ArrayList<String>();
+                        value = new ArrayList<String>();
+                        info.add(getString(R.string.latitude));
+                        value.add(getString(R.string.linking));
+                        info.add(getString(R.string.longitude));
+                        value.add(getString(R.string.linking));
+                        info.add(getString(R.string.altitude));
+                        value.add(getString(R.string.linking));
+                        info.add(getString(R.string.speed));
+                        value.add(getString(R.string.linking));
+                        info.add(getString(R.string.precision));
+                        value.add(getString(R.string.linking));
+                        info.add(getString(R.string.satellites));
+                        value.add(getString(R.string.linking));
+                        if (card_update != 1)
+                            initCard(info, value);
+                        card_update = 1;
+                    }
 				}
 				
 				@Override
 				public void onProviderDisabled(String provider) {
-					 info=new ArrayList<String>();
-		         	 value=new ArrayList<String>();
-                     info.add(getString(R.string.latitude));
-		             value.add(getString(R.string.no_link));
-		             info.add(getString(R.string.longitude));
-                     value.add(getString(R.string.no_link));
-		             info.add(getString(R.string.altitude));
-                     value.add(getString(R.string.no_link));
-		             info.add(getString(R.string.speed));
-                     value.add(getString(R.string.no_link));
-		             info.add(getString(R.string.precision));
-                     value.add(getString(R.string.no_link));
-		             info.add(getString(R.string.satellites));
-                     value.add(getString(R.string.no_link));
-		             if(card_update!=2)
-		 	        	initCard(info,value);
-		 	        card_update=2;
+                    if(isAdded()) {
+                        info = new ArrayList<String>();
+                        value = new ArrayList<String>();
+                        info.add(getString(R.string.latitude));
+                        value.add(getString(R.string.no_link));
+                        info.add(getString(R.string.longitude));
+                        value.add(getString(R.string.no_link));
+                        info.add(getString(R.string.altitude));
+                        value.add(getString(R.string.no_link));
+                        info.add(getString(R.string.speed));
+                        value.add(getString(R.string.no_link));
+                        info.add(getString(R.string.precision));
+                        value.add(getString(R.string.no_link));
+                        info.add(getString(R.string.satellites));
+                        value.add(getString(R.string.no_link));
+                        if (card_update != 2)
+                            initCard(info, value);
+                        card_update = 2;
+                    }
 					
 				}
 				
@@ -259,7 +264,7 @@ public class GPSManagement extends Fragment
 				}
 			});
           }
-          else
+          else if(isAdded())
           {
         	 info=new ArrayList<String>();
          	 value=new ArrayList<String>();
@@ -305,10 +310,12 @@ public class GPSManagement extends Fragment
 	
 	private void initCard(ArrayList<String> info,ArrayList<String> value)
     {
-        card=new GeneralInfoCard(mainActivity,info,value,getString(R.string.gps));
-        card.init();
-        CardView cardView=(CardView)rootView.findViewById(R.id.card_mobile);
-        cardView.setCard(card);
+        if(isAdded()) {
+            card = new GeneralInfoCard(mainActivity, info, value, getString(R.string.gps));
+            card.init();
+            CardView cardView = (CardView) rootView.findViewById(R.id.card_mobile);
+            cardView.setCard(card);
+        }
     }
 	
 	private class GPSTask extends AsyncTask<Location,Void,Void>
