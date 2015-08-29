@@ -91,6 +91,7 @@
     <string name="wifi_on">WiFi enabled</string>
     <string name="wifi_off">WiFi disabled</string>
     <string name="wifi_not_conn">Not connected</string>
+    <string name="gpu">Graphics Processing Unit</string>
     <string-array name="nav_drawer_items">
         <item >Home</item>
         <item >WiFi</item>
@@ -100,6 +101,7 @@
         <item >RAM</item>
         <item>@string/storage</item>
         <item >CPU</item>
+        <item>GPU</item>
         <item>@string/sensor</item>
         <item>Apps</item>
         <item>@string/battery</item>
@@ -115,6 +117,7 @@
         <item>@drawable/ram</item>
         <item>@drawable/storage</item>
         <item>@drawable/cpu</item>
+        <item>@drawable/gpu</item>
         <item>@drawable/_sensors</item>
         <item>@drawable/app</item>
         <item>@drawable/battery</item>

@@ -36,7 +36,7 @@ public final class R {
 		public static final int cling = 0x7f02007a;
 		public static final int cling_bleached = 0x7f02007b;
 		public static final int cling_button_bg = 0x7f02007c;
-		public static final int hand = 0x7f020086;
+		public static final int hand = 0x7f020087;
 	}
 	public static final class id {
 		public static final int showcase_button = 0x7f0b0006;
@@ -44,11 +44,11 @@ public final class R {
 		public static final int showcase_title_text = 0x7f0b0008;
 	}
 	public static final class layout {
-		public static final int handy = 0x7f030039;
-		public static final int showcase_button = 0x7f030044;
+		public static final int handy = 0x7f03003a;
+		public static final int showcase_button = 0x7f030045;
 	}
 	public static final class string {
-		public static final int ok = 0x7f0e004f;
+		public static final int ok = 0x7f0e0050;
 	}
 	public static final class style {
 		public static final int ShowcaseButton = 0x7f0f0011;

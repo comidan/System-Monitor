@@ -71,7 +71,14 @@ public class SystemInfoManagement extends Fragment
                 temp=fingerPrint.charAt(i);
             }
             if(slashes==3)
-                return fingerPrint.substring(i+1,fingerPrint.substring(i+1).indexOf(temp)+i);
+                try
+                {
+                    return fingerPrint.substring(i + 1, fingerPrint.substring(i + 1).indexOf(temp) + i);
+                }
+                catch(StringIndexOutOfBoundsException exc)
+                {
+                    return fingerPrint;                                     //fixed a magic crash
+                }
         }
         return getVersionName();
     }

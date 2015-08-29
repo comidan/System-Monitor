@@ -360,63 +360,73 @@ ADDED from AndroidManifest.xml:92:9
 		ADDED from AndroidManifest.xml:93:19
 	android:name
 		ADDED from AndroidManifest.xml:92:19
-intent-filter#android.appwidget.action.APPWIDGET_UPDATE
+intent-filter#android.appwidget.action.APPWIDGET_UPDATE+com.dev.system.monitor.RAMWidget.ACTION_CLEAR_RAM+com.dev.system.monitor.RAMWidget.ACTION_UPDATE_RAM
 ADDED from AndroidManifest.xml:94:13
 action#android.appwidget.action.APPWIDGET_UPDATE
 ADDED from AndroidManifest.xml:94:29
 	android:name
 		ADDED from AndroidManifest.xml:94:37
+action#com.dev.system.monitor.RAMWidget.ACTION_CLEAR_RAM
+ADDED from AndroidManifest.xml:95:29
+	android:name
+		ADDED from AndroidManifest.xml:95:37
+action#com.dev.system.monitor.RAMWidget.ACTION_UPDATE_RAM
+ADDED from AndroidManifest.xml:96:29
+	android:name
+		ADDED from AndroidManifest.xml:96:37
 meta-data#android.appwidget.provider
-ADDED from AndroidManifest.xml:96:13
+ADDED from AndroidManifest.xml:98:13
 	android:resource
-		ADDED from AndroidManifest.xml:96:66
+		ADDED from AndroidManifest.xml:98:66
 	android:name
-		ADDED from AndroidManifest.xml:96:24
+		ADDED from AndroidManifest.xml:98:24
 receiver#com.dev.system.monitor.CPUWidget
-ADDED from AndroidManifest.xml:98:9
+ADDED from AndroidManifest.xml:100:9
 	android:label
-		ADDED from AndroidManifest.xml:99:13
+		ADDED from AndroidManifest.xml:101:13
 	android:name
-		ADDED from AndroidManifest.xml:98:19
+		ADDED from AndroidManifest.xml:100:19
+intent-filter#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from AndroidManifest.xml:102:13
 receiver#com.dev.system.monitor.BatteryWidget
-ADDED from AndroidManifest.xml:104:9
+ADDED from AndroidManifest.xml:106:9
 	android:label
-		ADDED from AndroidManifest.xml:105:13
+		ADDED from AndroidManifest.xml:107:13
 	android:name
-		ADDED from AndroidManifest.xml:104:19
+		ADDED from AndroidManifest.xml:106:19
 receiver#com.dev.system.monitor.WifiWidget
-ADDED from AndroidManifest.xml:110:9
+ADDED from AndroidManifest.xml:112:9
 	android:label
-		ADDED from AndroidManifest.xml:111:13
+		ADDED from AndroidManifest.xml:113:13
 	android:name
-		ADDED from AndroidManifest.xml:110:19
+		ADDED from AndroidManifest.xml:112:19
 intent-filter#android.appwidget.action.APPWIDGET_UPDATE+com.dev.system.monitor.WifiWidget.ACTION_CHANGE_WIFI_STATUS
-ADDED from AndroidManifest.xml:112:13
+ADDED from AndroidManifest.xml:114:13
 action#com.dev.system.monitor.WifiWidget.ACTION_CHANGE_WIFI_STATUS
-ADDED from AndroidManifest.xml:113:17
+ADDED from AndroidManifest.xml:115:17
 	android:name
-		ADDED from AndroidManifest.xml:113:25
+		ADDED from AndroidManifest.xml:115:25
 receiver#com.dev.system.monitor.MobileWidget
-ADDED from AndroidManifest.xml:117:9
+ADDED from AndroidManifest.xml:119:9
 	android:label
-		ADDED from AndroidManifest.xml:118:13
+		ADDED from AndroidManifest.xml:120:13
 	android:name
-		ADDED from AndroidManifest.xml:117:19
+		ADDED from AndroidManifest.xml:119:19
 intent-filter#android.appwidget.action.APPWIDGET_UPDATE+com.dev.system.monitor.MobileWidget.ACTION_CHANGE_MOBILE_DATA_STATUS
-ADDED from AndroidManifest.xml:119:13
+ADDED from AndroidManifest.xml:121:13
 action#com.dev.system.monitor.MobileWidget.ACTION_CHANGE_MOBILE_DATA_STATUS
-ADDED from AndroidManifest.xml:120:17
+ADDED from AndroidManifest.xml:122:17
 	android:name
-		ADDED from AndroidManifest.xml:120:25
+		ADDED from AndroidManifest.xml:122:25
 service#com.dev.system.monitor.BatteryWidget$UpdateBattery
-ADDED from AndroidManifest.xml:124:9
-	android:name
-		ADDED from AndroidManifest.xml:124:18
-service#com.dev.system.monitor.WifiWidget$NetworkLog
-ADDED from AndroidManifest.xml:125:9
-	android:name
-		ADDED from AndroidManifest.xml:125:18
-service#com.dev.system.monitor.MobileWidget$MobileNetworkLog
 ADDED from AndroidManifest.xml:126:9
 	android:name
 		ADDED from AndroidManifest.xml:126:18
+service#com.dev.system.monitor.WifiWidget$NetworkLog
+ADDED from AndroidManifest.xml:127:9
+	android:name
+		ADDED from AndroidManifest.xml:127:18
+service#com.dev.system.monitor.MobileWidget$MobileNetworkLog
+ADDED from AndroidManifest.xml:128:9
+	android:name
+		ADDED from AndroidManifest.xml:128:18

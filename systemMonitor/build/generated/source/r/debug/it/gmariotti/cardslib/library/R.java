@@ -105,25 +105,25 @@ public final class R {
 		public static final int card_selector = 0x7f020075;
 		public static final int card_shadow = 0x7f020076;
 		public static final int card_undo = 0x7f020077;
-		public static final int ic_menu_expand_card_dark_normal = 0x7f02008d;
-		public static final int ic_menu_expand_card_dark_pressed = 0x7f02008e;
-		public static final int ic_menu_overflow_card_dark_normal = 0x7f02008f;
-		public static final int ic_menu_overflow_card_dark_pressed = 0x7f020090;
-		public static final int ic_menu_overflow_card_rounded_dark_normal = 0x7f020091;
-		public static final int ic_menu_overflow_card_rounded_dark_pressed = 0x7f020092;
-		public static final int ic_undobar_undo = 0x7f020093;
-		public static final int pressed_background_card = 0x7f0200a3;
-		public static final int pressed_background_kitkat_card = 0x7f0200a5;
-		public static final int undobar = 0x7f0200ae;
-		public static final int undobar_button_focused = 0x7f0200af;
-		public static final int undobar_button_pressed = 0x7f0200b0;
-		public static final int undobar_divider = 0x7f0200b1;
+		public static final int ic_menu_expand_card_dark_normal = 0x7f02008e;
+		public static final int ic_menu_expand_card_dark_pressed = 0x7f02008f;
+		public static final int ic_menu_overflow_card_dark_normal = 0x7f020090;
+		public static final int ic_menu_overflow_card_dark_pressed = 0x7f020091;
+		public static final int ic_menu_overflow_card_rounded_dark_normal = 0x7f020092;
+		public static final int ic_menu_overflow_card_rounded_dark_pressed = 0x7f020093;
+		public static final int ic_undobar_undo = 0x7f020094;
+		public static final int pressed_background_card = 0x7f0200a4;
+		public static final int pressed_background_kitkat_card = 0x7f0200a6;
+		public static final int undobar = 0x7f0200af;
+		public static final int undobar_button_focused = 0x7f0200b0;
+		public static final int undobar_button_pressed = 0x7f0200b1;
+		public static final int undobar_divider = 0x7f0200b2;
 	}
 	public static final class id {
 		public static final int card_base_empty_cardwithlist_text = 0x7f0b0053;
 		public static final int card_children_simple_title = 0x7f0b004f;
 		public static final int card_content_expand_layout = 0x7f0b005b;
-		public static final int card_expand_inner_simple_title = 0x7f0b009e;
+		public static final int card_expand_inner_simple_title = 0x7f0b00a0;
 		public static final int card_header_button_expand = 0x7f0b004d;
 		public static final int card_header_button_frame = 0x7f0b004b;
 		public static final int card_header_button_other = 0x7f0b004e;
@@ -131,11 +131,11 @@ public final class R {
 		public static final int card_header_inner_frame = 0x7f0b004a;
 		public static final int card_header_inner_simple_title = 0x7f0b0056;
 		public static final int card_header_layout = 0x7f0b005a;
-		public static final int card_inner_base_empty_cardwithlist = 0x7f0b00a1;
-		public static final int card_inner_base_main_cardwithlist = 0x7f0b00a0;
-		public static final int card_inner_base_progressbar_cardwithlist = 0x7f0b00a2;
+		public static final int card_inner_base_empty_cardwithlist = 0x7f0b00a3;
+		public static final int card_inner_base_main_cardwithlist = 0x7f0b00a2;
+		public static final int card_inner_base_progressbar_cardwithlist = 0x7f0b00a4;
 		public static final int card_main_content_layout = 0x7f0b0054;
-		public static final int card_main_inner_simple_title = 0x7f0b009f;
+		public static final int card_main_inner_simple_title = 0x7f0b00a1;
 		public static final int card_main_layout = 0x7f0b0059;
 		public static final int card_overlap = 0x7f0b005c;
 		public static final int card_section_simple_title = 0x7f0b0050;
@@ -144,10 +144,10 @@ public final class R {
 		public static final int card_thumb_and_content_layout = 0x7f0b005d;
 		public static final int card_thumbnail_image = 0x7f0b0052;
 		public static final int card_thumbnail_layout = 0x7f0b005e;
-		public static final int list_cardId = 0x7f0b00a6;
-		public static final int list_card_undobar = 0x7f0b00a7;
-		public static final int list_card_undobar_button = 0x7f0b00a9;
-		public static final int list_card_undobar_message = 0x7f0b00a8;
+		public static final int list_cardId = 0x7f0b00a8;
+		public static final int list_card_undobar = 0x7f0b00a9;
+		public static final int list_card_undobar_button = 0x7f0b00ab;
+		public static final int list_card_undobar_message = 0x7f0b00aa;
 		public static final int undobar = 0x7f0b005f;
 		public static final int undobar_button = 0x7f0b0061;
 		public static final int undobar_message = 0x7f0b0060;
@@ -170,13 +170,13 @@ public final class R {
 		public static final int card_thumbnail_layout = 0x7f030025;
 		public static final int card_thumbnail_overlay_layout = 0x7f030026;
 		public static final int card_undo_layout = 0x7f030027;
-		public static final int inner_base_expand = 0x7f03003a;
-		public static final int inner_base_header = 0x7f03003b;
-		public static final int inner_base_main = 0x7f03003c;
-		public static final int inner_base_main_cardwithlist = 0x7f03003d;
-		public static final int list_card_layout = 0x7f03003f;
-		public static final int list_card_thumbnail_layout = 0x7f030040;
-		public static final int list_card_undo_message = 0x7f030041;
+		public static final int inner_base_expand = 0x7f03003b;
+		public static final int inner_base_header = 0x7f03003c;
+		public static final int inner_base_main = 0x7f03003d;
+		public static final int inner_base_main_cardwithlist = 0x7f03003e;
+		public static final int list_card_layout = 0x7f030040;
+		public static final int list_card_thumbnail_layout = 0x7f030041;
+		public static final int list_card_undo_message = 0x7f030042;
 	}
 	public static final class plurals {
 		public static final int card_selected_items = 0x7f0d0000;
@@ -185,7 +185,7 @@ public final class R {
 	public static final class string {
 		public static final int card_empty_cardwithlist_text = 0x7f0e0022;
 		public static final int card_progressbar_cardwithlist_text = 0x7f0e0023;
-		public static final int list_card_undo_title = 0x7f0e0041;
+		public static final int list_card_undo_title = 0x7f0e0042;
 	}
 	public static final class style {
 		public static final int card = 0x7f0f00a1;

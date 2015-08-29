@@ -97,16 +97,19 @@ public class MainActivity extends Activity
 				case 7:
 					fragment=new CPUManagement();
 					break;
-                case 8:
+				case 8:
+					fragment=new GPUManagement();
+					break;
+                case 9:
                     fragment=new SensorManagement();
                     break;
-				case 9:
+				case 10:
 					fragment=new AppManagement();
 					break;
-				case 10:
+				case 11:
 					fragment=new BatteryManagement();
                     break;
-                case 11:
+                case 12:
                     fragment=new SystemInfoManagement();
                     break;
 				default:
@@ -160,67 +163,6 @@ public class MainActivity extends Activity
 			navigationListView.setSelection(0);
 			drawerLayout.closeDrawer(navigationListView);
 		}
-	    /*if(firstrun)
-	    {
-	    	RelativeLayout.LayoutParams lps = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            lps.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-            lps.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-            int margin = ((Number) (getResources().getDisplayMetrics().density * 12)).intValue();
-            if(Build.VERSION.SDK_INT>=19)
-         	   lps.setMargins(margin,margin,margin,margin+70);
-            else
-         	   lps.setMargins(margin,margin,margin,margin);
-		   getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("firstrun", false).commit();
-           if(Build.VERSION.SDK_INT<21)
-		       try
-		       {
-		    	   ActionViewTarget target=new ActionViewTarget(this,ActionViewTarget.Type.HOME);
-		    	   sv=new ShowcaseView.Builder(this,true)
-                    	 .setTarget(target)
-                    	 .setContentTitle("Swipe to open menu")
-                    	 .setStyle(R.style.CustomShowcaseTheme)
-                    	 .setShowcaseEventListener(null)
-                    	 .build();
-                try
-                {
-            	    sv.setButtonPosition(lps);
-            	    sv.show();
-                }
-                catch(NullPointerException exc)
-                {
-
-                }
-		       }
-		       catch(RuntimeException exc)
-		       {
-		    	   //due to no actionbar present, will be fixing by adding actionbarsherlock
-		       }
-           else
-           {
-               Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
-               Log.i("Toolbar",(toolbar==null)+"");
-               View addTargetView = null;
-               for (int i=0;i<toolbar.getChildCount();i++) {
-                   View child=toolbar.getChildAt(i);
-                   if(ImageView.class.isInstance(child))
-                   {
-                       addTargetView=child;
-                       break;
-                   }
-                   if (addTargetView==null)
-                       addTargetView=toolbar;
-               }
-               //addTargetView=toolbar;
-               Log.i("Toolbar",(addTargetView==null)+"");
-               ViewTarget addTarget=new ViewTarget(addTargetView);
-               sv=new ShowcaseView.Builder(this,true)
-                       .setTarget(addTarget)
-                       .setContentTitle("Swipe to open menu")
-                       .setStyle(R.style.CustomShowcaseTheme)
-                       .setShowcaseEventListener(null)
-                       .build();
-           }
-	    }*/
 	}
 
 	@Override
