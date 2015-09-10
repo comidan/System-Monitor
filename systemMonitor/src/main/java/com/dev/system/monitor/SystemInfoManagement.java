@@ -53,9 +53,10 @@ public class SystemInfoManagement extends Fragment
             case 18:return "Jelly Bean";
             case 19:return "KitKat";
             case 20:return "KitKat Watch";
-            case 21:return "Lollipop";
-            default:return "Lollipop";
-
+            case 21:
+            case 22:return "Lollipop";
+            case 23:return "Marshmallow";
+            default:return "Android";
         }
     }
 

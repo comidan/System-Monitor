@@ -90,38 +90,38 @@ public class AppManagement extends Fragment
             ArrayList<PackageItem> data=new ArrayList<PackageItem>();
             ActivityManager activityManager=(ActivityManager)getActivity().getSystemService("activity");
 			List<RunningAppProcessInfo> procInfo=activityManager.getRunningAppProcesses();
-			progressBar.setMax(procInfo.size()-1); //keep out my app :D
+			System.out.println("Running proc size : "+procInfo.size());
+			progressBar.setMax(procInfo.size()-1);
             progressBar.setProgress(0);
 			for (int i=0;i<procInfo.size();i++)
 			{
 			    RunningAppProcessInfo process=procInfo.get(i);
 			    String name=process.processName;
-			    if(!name.equals("com.dev.system.monitor"))
-			      try
-			      {
+				try
+				{
 			    	PackageItem item=new PackageItem();
                     item.setName(appInfo.getApplicationLabel(appInfo
                     					.getApplicationInfo(process.processName,PackageManager.GET_META_DATA))
                     					.toString());
                     item.setPackageName(name);
-                    item.setIcon(appInfo.getApplicationIcon(name));       
+                    item.setIcon(appInfo.getApplicationIcon(name));
     			    int[] pids = new int[1];
     			    pids[0]=process.pid;
     			    android.os.Debug.MemoryInfo[] mi=activityManager.getProcessMemoryInfo(pids);
     			    int totalMemoryInKByte=mi[0].dalvikPrivateDirty+
     			    					   mi[0].dalvikSharedDirty+
-    			    					   mi[0].dalvikPss+        
+    			    					   mi[0].dalvikPss+
     			    					   mi[0].nativePrivateDirty+
     			    					   mi[0].nativeSharedDirty+
     			    					   mi[0].nativePss;
-    			    item.setMemoryInKByte(totalMemoryInKByte);       
+    			    item.setMemoryInKByte(totalMemoryInKByte);
                     data.add(item);
                     publishProgress();
-			      }
-			      catch(NameNotFoundException exc)
-			      {
+				}
+				catch(NameNotFoundException exc)
+				{
 			    	  
-			      }
+				}
 		    }
             return data;
         }

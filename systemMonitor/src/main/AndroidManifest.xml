@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dev.system.monitor"
     xmlns:tools="http://schemas.android.com/tools"
-    android:versionCode="29"
-    android:versionName="1.5.6">
+    android:versionCode="31"
+    android:versionName="1.6.1">
     <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
 	<uses-feature android:name="android.hardware.location" android:required="false"/>
 	<uses-feature android:name="android.hardware.telephony" android:required="false"/>

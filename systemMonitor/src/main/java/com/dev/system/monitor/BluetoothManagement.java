@@ -62,9 +62,9 @@ public class BluetoothManagement extends Fragment
     		 .show();
 			 ArrayList<String> info=new ArrayList<String>(),value=new ArrayList<String>();
 	         info.add(getString(R.string.mac));
-             value.add(bluetoothAdapter.getAddress());
-            info.add(getString(R.string.b_device_name));
-             value.add(bluetoothAdapter.getName());
+             value.add(bluetoothAdapter!=null ? bluetoothAdapter.getAddress() : "Not available");
+             info.add(getString(R.string.b_device_name));
+             value.add(bluetoothAdapter!=null ? bluetoothAdapter.getName() : "Not available");
 			 info.add(getString(R.string.b_visibility));
 	         mainActivity.setTitle("Bluetooth");
 	         bluetoothState.setImageResource(R.drawable.bluetooth_off);

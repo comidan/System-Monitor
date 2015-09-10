@@ -128,7 +128,7 @@ public class GPSManagement extends Fragment
 				catch(SecurityException exc)
 				{
 					AlertDialog.Builder builder=new Builder(mainActivity);
-					builder.setMessage(GPS_Status ? getString(R.string.gps_msg_true) : getString(R.string.gps_msg_false))
+					builder.setMessage(!GPS_Status ? getString(R.string.gps_msg_true) : getString(R.string.gps_msg_false))
 					       .setPositiveButton(getString(R.string.ok),new OnClickListener() {
 							
 					    	   @Override

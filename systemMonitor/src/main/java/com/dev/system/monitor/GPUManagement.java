@@ -85,7 +85,7 @@ public class GPUManagement extends Fragment
         info.add("Vendor");
         values.add(realValues.get("VENDOR"));
         info.add("Version");
-        values.add(realValues.get("VERSION").substring(0,realValues.get("VERSION").indexOf("@")-1));
+        values.add(realValues.get("VERSION").substring(0,13)); //OpenGL ES X.X
         initCard(info,values);
     }
 
