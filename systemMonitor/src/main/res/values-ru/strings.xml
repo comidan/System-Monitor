@@ -1,0 +1,124 @@
+<resources>
+	<string name="app_name">System Monitor</string>
+	<string name="action_settings">Настройки</string>
+	<string name="drawer_open">открыть</string>
+	<string name="drawer_close">закрыто</string>
+	<string name="download">Скачать</string>
+	<string name="upload">Загрузить</string>
+	<string name="wifi_info">Данные о сети Wi-Fi</string>
+	<string name="ip">IP-адрес</string>
+	<string name="mac">MAC-адрес</string>
+	<string name="bandwidth">вместимость</string>
+	<string name="mobile">Мобильное</string>
+	<string name="mobile_info">Данные о мобильной сети</string>
+	<string name="mobile_msg">Мы не смогли автоматически получить доступ к настройкам сети в силу настроек безопасности вашего смартфона. Пожалуйста, измените статус данных вручную.</string>
+	<string name="mobile_on">Мобильные данные включен</string>
+	<string name="mobile_off">Мобильные данные выключен</string>
+	<string name="isp">провайдер</string>
+	<string name="bluetooth_info">Данные о сети Bluetooth</string>
+	<string name="b_device_name">Имя Устройства</string>
+	<string name="b_visibility">Видимость Устройства</string>
+	<string name="gps">Данные о GPS</string>
+	<string name="gps_msg">Вы можете просмотреть вашу позицию, нажав на эту, как только вы получите вашу позицию в приложение</string>
+	<string name="gps_msg_true">Мы не смогли автоматически включить GPS в силу настроек безопасности вашего смартфона. Пожалуйста, измените статус GPS вручную.</string>
+	<string name="gps_msg_false">Мы не смогли автоматически выключить GPS в силу настроек безопасности вашего смартфона. Пожалуйста, измените статус GPS вручную.</string>
+	<string name="linking">Связывание...</string>
+	<string name="no_link">Нет связи</string>
+	<string name="latitude">широта</string>
+	<string name="longitude">долгота</string>
+	<string name="altitude">Высота</string>
+	<string name="speed">Скорость</string>
+	<string name="precision">Точность</string>
+	<string name="satellites">Спутников</string>
+	<string name="total_ram">Общий объем оперативной памяти</string>
+	<string name="available_ram">Доступно оперативной памяти</string>
+	<string name="used_ram">Использовано оперативной памяти</string>
+	<string name="free_ram">Свободной оперативной памяти</string>
+	<string name="internal_storage">Встроенная памть</string>
+	<string name="external_storage">Внешнее ЗУ</string>
+	<string name="total_mem">Всего памяти</string>
+	<string name="available_mem">Доступно памяти</string>
+	<string name="max_freq">Max Частота</string>
+	<string name="min_freq">Min Частота</string>
+	<string name="temperature">Температура</string>
+	<string name="usage">Использование</string>
+	<string name="light">Свет</string>
+	<string name="gravity">Гравитация</string>
+	<string name="acceleration">Ускорение</string>
+	<string name="gyroscope">Гироскоп</string>
+	<string name="magnetic_field">Магнитное поле</string>
+	<string name="pressure">Давление</string>
+	<string name="light_sens">Датчик Света</string>
+	<string name="pressure_sens">Датчик Давления</string>
+	<string name="running_apps">Работающее Приложение</string>
+	<string name="battery">Аккумулятор</string>
+	<string name="battery_info">Данные об Аккумуляторе</string>
+	<string name="ba_power_source">Источник Питания</string>
+	<string name="ba_type">Тип</string>
+	<string name="voltage">Напряжение</string>
+	<string name="health">Состояние</string>
+	<string name="name">Имя</string>
+	<string name="version">версия</string>
+	<string name="model">Модель</string>
+	<string name="product">Продукты</string>
+	<string name="system">Система</string>
+	<string name="sensor">Сенсоры</string>
+	<string name="x">Ось-X</string>
+	<string name="y">Ось-Y</string>
+	<string name="z">Ось-Z</string>
+	<string name="storage">Память</string>
+	<string name="charge">заряжать</string>
+	<string name="cold">холодный</string>
+	<string name="good">Хорошо</string>
+	<string name="over_volt">Перенапряжение</string>
+	<string name="over_heat">Перегрев</string>
+	<string name="system_info">Данные о Системе</string>
+	<string name="unknown">Нет данных</string>
+	<string name="cancel">Отмена</string>
+	<string name="ok">ОК</string>
+	<string name="ram_msg">Чтобы освободить память,  Вы можете остановить некоторые процессы. Важные процессы затронуты не будут.</string>
+	<string name="ram_cls">Оперативная память освобождена</string>
+	<string name="b_not_av">Недоступен</string>
+	<string name="b_not_vi">Не видимый</string>
+	<string name="b_vi">видимый</string>
+	<string name="b_con">соединяемый</string>
+	<string name="b_not_av_msg">Bluetooth адаптер недоступен на вашем устройстве</string>
+	<string name="b_err">Ошибка во время включения/выключения Bluetooth</string>
+	<string name="tut_wifi">Долгий клик чтобы включить/выключить</string>
+	<string name="tut_apps">Проведите по экрану (Свайп), чтобы увидеть варианты</string>
+	<string name="tut_ram">Долгий клик чтобы получить информацию</string>
+	<string name="wifi_on">WiFi включено</string>
+	<string name="wifi_off">WiFi выключено</string>
+	<string name="wifi_not_conn">Не подключен</string>
+	<string-array name="nav_drawer_items">
+		<item>Домой</item>
+		<item>WiFi</item>
+		<item>Мобильное</item>
+		<item>Bluetooth</item>
+		<item>GPS</item>
+		<item>@string/storage</item>
+		<item >Процессор</item>
+		<item >ОЗУ</item>
+		<item>ГПУ</item>
+		<item>@string/sensor</item>
+		<item>Приложения</item>
+		<item>@string/battery</item>
+		<item>@string/system_info</item>
+	</string-array>
+	<array name="nav_drawer_icons">
+		<item>@drawable/home</item>
+		<item>@drawable/wifi_ico</item>
+		<item>@drawable/mobile</item>
+		<item>@drawable/bluetooth</item>
+		<item>@drawable/gps</item>
+		<item>@drawable/storage</item>
+		<item>@drawable/cpu</item>
+		<item>@drawable/ram</item>
+		<item>@drawable/gpu</item>
+		<item>@drawable/_sensors</item>
+		<item>@drawable/app</item>
+		<item>@drawable/battery</item>
+		<item>@drawable/system_info</item>
+	</array>
+	<string name="desc_list_item_icon">Item Icon</string>
+</resources>

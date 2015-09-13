@@ -13,6 +13,7 @@ import com.jjoe64.graphview.GraphView.GraphViewData;
 import com.jjoe64.graphview.LineGraphView;
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -70,6 +71,7 @@ public class CPUManagement extends Fragment
 	    	  }
 	      });
 	      mainActivity=getActivity();
+		  //mainActivity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 	      NUMBER_OF_CORES=files.length;
 	      if(NUMBER_OF_CORES<=4)
 	      {

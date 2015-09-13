@@ -168,7 +168,13 @@ public class BluetoothManagement extends Fragment
         mainActivity.registerReceiver(bluetoothChanged,new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
         return rootView;
     }
-	
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		mainActivity.unregisterReceiver(bluetoothChanged);
+	}
+
 	private void initCard(ArrayList<String> info,ArrayList<String> value)
     {
         if(isAdded())

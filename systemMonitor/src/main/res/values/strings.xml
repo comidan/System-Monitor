@@ -98,9 +98,9 @@
         <item >Mobile</item>
         <item >Bluetooth</item>
         <item >GPS</item>
-        <item >RAM</item>
         <item>@string/storage</item>
         <item >CPU</item>
+        <item >RAM</item>
         <item>GPU</item>
         <item>@string/sensor</item>
         <item>Apps</item>
@@ -114,9 +114,9 @@
         <item>@drawable/mobile</item>
         <item>@drawable/bluetooth</item>
 		<item>@drawable/gps</item>
-        <item>@drawable/ram</item>
         <item>@drawable/storage</item>
         <item>@drawable/cpu</item>
+        <item>@drawable/ram</item>
         <item>@drawable/gpu</item>
         <item>@drawable/_sensors</item>
         <item>@drawable/app</item>

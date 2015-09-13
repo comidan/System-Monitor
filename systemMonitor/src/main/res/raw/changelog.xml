@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="1.6.2" changeDate="Sep 13, 2015">
+        <changelogtext>[font color=black]Now supporting Italian and Russian[/font]</changelogtext>
+        <changelogtext>[font color=black]Improved layout for landscape tablets[/font]</changelogtext>
+        <changelogtext>[font color=black]Minor bug fixes[/font]</changelogtext>
+    </changelogversion>
     <changelogversion versionName="1.6.1" changeDate="Sep 10, 2015">
         <changelogtext>[font color=black]Ready and full support for Android 6 Marshmallow[/font]</changelogtext>
         <changelogtext>[font color=black]Minor bug fixes[/font]</changelogtext>

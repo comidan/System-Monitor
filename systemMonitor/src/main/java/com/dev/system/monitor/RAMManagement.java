@@ -1,8 +1,8 @@
 package com.dev.system.monitor;
 
-import com.dev.system.monitor.R;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.ArrayList;
 import java.util.List;
 import com.echo.holographlibrary.PieGraph;
 import com.echo.holographlibrary.PieSlice;
@@ -31,6 +31,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import it.gmariotti.cardslib.library.view.CardView;
+
 public class RAMManagement extends Fragment
 {
 	private View rootView;
@@ -41,6 +43,8 @@ public class RAMManagement extends Fragment
     private ProgressBar progressBar;
     private boolean firstrun;
     private boolean isCleaning;
+	private GeneralInfoCard card;
+	private ArrayList<String> info,values;
 	
 	@Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState)
@@ -50,6 +54,8 @@ public class RAMManagement extends Fragment
         					   .getBoolean("firstrun_fab",true);
         isCleaning=false;
         Fab mFab = (Fab)rootView.findViewById(R.id.fabbutton);
+		info=new ArrayList<>();
+		values=new ArrayList<>();
         if(firstrun)
 	    {
            getActivity().getSharedPreferences("PREFERENCE",getActivity().MODE_PRIVATE).edit()
@@ -215,18 +221,25 @@ public class RAMManagement extends Fragment
 		    pg.setInterpolator(new AccelerateDecelerateInterpolator());
 		    pg.animateToGoalValues();
 		    pg.setPadding(3);
-		    ((TextView)rootView.findViewById(R.id.lat)).setText(getString(R.string.total_ram)+"\n"+total+" MB");
-		    if(total-free>free)
-		    {
-		    	((TextView)rootView.findViewById(R.id.core0)).setText(getString(R.string.available_ram)+"\n"+free+" MB");
-		        ((TextView)rootView.findViewById(R.id.textView6)).setText(getString(R.string.used_ram)+"\n"+(total-free)+" MB");
-		    }
-		    else
-		    {
-		    	((TextView)rootView.findViewById(R.id.core0)).setText(getString(R.string.used_ram)+"\n"+(total-free)+" MB");
-		        ((TextView)rootView.findViewById(R.id.textView6)).setText(getString(R.string.available_ram)+"\n"+free+" MB");
-		    }
-	        ((TextView)rootView.findViewById(R.id.textView3)).setText(rate+" %");
+			info.clear();
+			RAMManagement.this.values.clear();
+			info.add(getString(R.string.total_ram));
+			RAMManagement.this.values.add(total+" MB");
+			info.add(getString(R.string.available_ram));
+			RAMManagement.this.values.add(free+" MB");
+			info.add(getString(R.string.used_ram));
+			RAMManagement.this.values.add((total-free)+" MB");
+			((TextView)rootView.findViewById(R.id.textView3)).setText(rate + " %");
+			initCard(info,RAMManagement.this.values);
+
 		}
+	}
+
+	private void initCard(ArrayList<String> info,ArrayList<String> value)
+	{
+		card=new GeneralInfoCard(mainActivity,info,value,"RAM Information");
+		card.init();
+		CardView cardView = (CardView) rootView.findViewById(R.id.card_ram);
+		cardView.setCard(card);
 	}
 }

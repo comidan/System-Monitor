@@ -236,10 +236,10 @@ public class GPU {
                 @Override
                 public void run() {
                     final GLSurfaceView glView = new GLSurfaceView(context);
+                    glView.setEGLContextClientVersion(info.eGLContextClientVersion);
                     glView.setEGLConfigChooser(new EglChooser<T>(info));
                     glView.setZOrderOnTop(true);
                     renderer = new GPURenderer<T>(glView, info, callback);
-                    glView.setEGLContextClientVersion(info.eGLContextClientVersion);
                     glView.setRenderer(renderer);
                     final FrameLayout layout = (FrameLayout) context.findViewById(android.R.id.content); // Note: needs to be layout of current active view
                     layout.addView(glView);

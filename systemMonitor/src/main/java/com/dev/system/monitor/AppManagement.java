@@ -42,7 +42,7 @@ public class AppManagement extends Fragment
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState)
     {
     	rootView=inflater.inflate(R.layout.swipe_list_view_activity,container,false);
-    	getActivity().setTitle("Running Applications");
+    	getActivity().setTitle(getString(R.string.running_apps));
     	progressBar=(ProgressBar)rootView.findViewById(R.id.progressBar1);
     	swipeListView=(SwipeListView)rootView.findViewById(R.id.example_lv_list);
     	data=new ArrayList<PackageItem>();

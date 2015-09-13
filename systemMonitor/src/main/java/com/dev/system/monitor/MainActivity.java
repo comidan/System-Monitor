@@ -89,13 +89,13 @@ public class MainActivity extends Activity
 					fragment=new GPSManagement();
 					break;
 				case 5:
-					fragment=new RAMManagement();
+					fragment=new StorageManagement();
 					break;
                 case 6:
-                    fragment=new StorageManagement();
+					fragment=new CPUManagement();
                     break;
 				case 7:
-					fragment=new CPUManagement();
+					fragment=new RAMManagement();
 					break;
 				case 8:
 					fragment=new GPUManagement();
