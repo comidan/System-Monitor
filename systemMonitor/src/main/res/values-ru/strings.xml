@@ -90,6 +90,7 @@
 	<string name="wifi_on">WiFi включено</string>
 	<string name="wifi_off">WiFi выключено</string>
 	<string name="wifi_not_conn">Не подключен</string>
+	<string name="gpu">Графический процессор</string>
 	<string-array name="nav_drawer_items">
 		<item>Домой</item>
 		<item>WiFi</item>

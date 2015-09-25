@@ -1,7 +1,9 @@
 package com.dev.system.monitor;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -22,11 +24,13 @@ public class PackageAdapter extends BaseAdapter
     private List<PackageItem> data;
     private Context context;
     private SwipeListView swipeListView;
+    private Fragment fragmentContext;
     
-    public PackageAdapter(final Context context, List<PackageItem> data,SwipeListView swipeListView) {
+    public PackageAdapter(final Context context, List<PackageItem> data,SwipeListView swipeListView,Fragment fragmentContext) {
         this.context=context;
         this.data=data;
         this.swipeListView=swipeListView;
+        this.fragmentContext=fragmentContext;
     }
 
     @Override
@@ -101,9 +105,8 @@ public class PackageAdapter extends BaseAdapter
                 } else {
                     uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
                 }
-                context.startActivity(uninstallIntent);
-                data.remove(item);
-                notifyDataSetChanged();
+                ((AppManagement)fragmentContext).operatingThirdPackage=item.getPackageName();
+                fragmentContext.startActivityForResult(uninstallIntent, 3);
             }
         });
         return convertView;

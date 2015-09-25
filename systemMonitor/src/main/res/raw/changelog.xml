@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="1.7" changeDate="Sep 25, 2015">
+        <changelogtext>[font color=black]Now System monitor Pro is available! Discover its new features![/font]</changelogtext>
+        <changelogtext>[font color=black]Fixed few minor bugs[/font]</changelogtext>
+    </changelogversion>
     <changelogversion versionName="1.6.2" changeDate="Sep 13, 2015">
         <changelogtext>[font color=black]Now supporting Italian and Russian[/font]</changelogtext>
         <changelogtext>[font color=black]Improved layout for landscape tablets[/font]</changelogtext>

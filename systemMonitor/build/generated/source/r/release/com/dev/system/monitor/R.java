@@ -1437,6 +1437,7 @@ containing a value of this type.
         public static final int card_main_storage=0x7f0b009a;
         public static final int card_mobile=0x7f0b0070;
         public static final int card_overlap=0x7f0b005c;
+        public static final int card_ram=0x7f0b0091;
         public static final int card_scrollview=0x7f0b006e;
         public static final int card_section_simple_title=0x7f0b0050;
         public static final int card_sensors_accelerometer=0x7f0b0094;
@@ -1462,7 +1463,6 @@ containing a value of this type.
         public static final int chg_textbullet=0x7f0b0064;
         public static final int choice=0x7f0b0022;
         public static final int collapseActionView=0x7f0b0019;
-        public static final int core0=0x7f0b008f;
         public static final int counter=0x7f0b0069;
         public static final int dataDown=0x7f0b008c;
         public static final int dataDownloaded=0x7f0b008d;
@@ -1490,6 +1490,7 @@ containing a value of this type.
         public static final int front=0x7f0b00b3;
         public static final int graph=0x7f0b006b;
         public static final int graph_extra_storage=0x7f0b009b;
+        public static final int graph_layout=0x7f0b008f;
         public static final int graph_main_storage=0x7f0b0098;
         public static final int graph_widget=0x7f0b00cb;
         public static final int home=0x7f0b0003;
@@ -1501,7 +1502,6 @@ containing a value of this type.
         public static final int item_navigation_container=0x7f0b00a5;
         public static final int item_navigation_img=0x7f0b00a6;
         public static final int item_navigation_title=0x7f0b00a7;
-        public static final int lat=0x7f0b0090;
         public static final int left=0x7f0b0020;
         public static final int linear1=0x7f0b00ac;
         public static final int linearLayout1=0x7f0b0076;
@@ -1524,7 +1524,7 @@ containing a value of this type.
         public static final int never=0x7f0b001b;
         public static final int none=0x7f0b0017;
         public static final int normal=0x7f0b000a;
-        public static final int progressBar=0x7f0b0091;
+        public static final int progressBar=0x7f0b0090;
         public static final int progressBar1=0x7f0b00b8;
         public static final int progress_circular=0x7f0b0004;
         public static final int progress_horizontal=0x7f0b0005;

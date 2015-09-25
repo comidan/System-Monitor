@@ -2,15 +2,13 @@ package com.dev.system.monitor;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import com.fortysevendeg.swipelistview.SwipeListView;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
-
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.Fragment;
 import android.app.ActivityManager.RunningAppProcessInfo;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -21,12 +19,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class AppManagement extends Fragment
 {
@@ -38,6 +34,8 @@ public class AppManagement extends Fragment
 	private ProgressBar progressBar;
     private ShowcaseView sv;
     private ListAppTask task;
+	String operatingThirdPackage="";
+
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState)
     {
@@ -46,7 +44,7 @@ public class AppManagement extends Fragment
     	progressBar=(ProgressBar)rootView.findViewById(R.id.progressBar1);
     	swipeListView=(SwipeListView)rootView.findViewById(R.id.example_lv_list);
     	data=new ArrayList<PackageItem>();
-        adapter=new PackageAdapter(getActivity(),data,swipeListView);
+        adapter=new PackageAdapter(getActivity(),data,swipeListView,this);
         if(Build.VERSION.SDK_INT>=11)
             swipeListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         reload();
@@ -66,15 +64,39 @@ public class AppManagement extends Fragment
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
         switch(requestCode)
         {
             case REQUEST_CODE_SETTINGS:
                 reload();
+			case 3:
+				for(int i=0;i<data.size();i++)
+					if(data.get(i).getPackageName().equals(operatingThirdPackage))
+					{
+						if(!isAppPresent(operatingThirdPackage,getActivity()))
+						{
+							data.remove(i);
+							adapter.notifyDataSetChanged();
+						}
+						break;
+					}
         }
     }
-    
+
+	private boolean isAppPresent(String packageName,Context context) {
+		try
+		{
+			context.getPackageManager().getApplicationInfo(packageName,0);
+			return true;
+		}
+		catch(PackageManager.NameNotFoundException e )
+		{
+			return false;
+		}
+
+	}
+
     @Override
     public void onPause()
     {
@@ -211,4 +233,6 @@ public class AppManagement extends Fragment
             }
         }
     }
+
+
 }

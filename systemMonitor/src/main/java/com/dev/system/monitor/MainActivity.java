@@ -6,13 +6,16 @@ import uk.me.lewisdeane.lnavigationdrawer.NavigationListView;
 import uk.me.lewisdeane.lnavigationdrawer.NavigationListView.NavigationItemClickListener;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -55,6 +58,28 @@ public class MainActivity extends Activity
         actionBar.setStackedBackgroundDrawable(new ColorDrawable(Color.parseColor("#318CE7")));
 		setContentView(R.layout.activity_main);
 		final boolean firstrun=getSharedPreferences("PREFERENCE",MODE_PRIVATE).getBoolean("firstrun",true);
+		int runs=getSharedPreferences("PREFERENCE",MODE_PRIVATE).getInt("RUNS",0);
+		if(runs%6==0)
+		{
+			final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setTitle("System Monitor Pro is available!");
+			builder.setMessage("Check it out!");
+			builder.setPositiveButton("Yes!", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.dev.system.pro.pro")));
+				}
+			});
+			builder.setNegativeButton("Later", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					dialog.dismiss();
+				}
+			});
+			builder.show();
+		}
+		runs++;
+		getSharedPreferences("PREFERENCE",MODE_PRIVATE).edit().putInt("RUNS",runs).apply();
 		navMenuTitles=getResources().getStringArray(R.array.nav_drawer_items);
 		navMenuIcons=getResources().obtainTypedArray(R.array.nav_drawer_icons);
 		drawerLayout=(DrawerLayout) findViewById(R.id.drawer_layout);

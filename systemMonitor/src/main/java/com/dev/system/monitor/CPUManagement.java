@@ -172,32 +172,6 @@ public class CPUManagement extends Fragment
 		  {
 			  
 		  }
-		  /*try
-		  {
-		  		String[] args;
-		  		args=new String[]{"/system/bin/cat","/sys/devices/system/cpu/cpu0/cpufreq/gpu_cur_freq"};   //testing gathering gpu information
-		  		cmd=new ProcessBuilder(args);
-		  		Process process=cmd.start();
-		  		in=process.getInputStream();
-		  		byte[] re=new byte[1024];
-		  		while(in.read(re)!=-1)
-		  			result+=new String(re);
-		  		in.close();
-		  		for(int j=0;j<result.length();j++)
-		  			try
-		  			{
-		  				Integer.parseInt(result.charAt(j)+"");
-		  			}
-		  			catch(NumberFormatException exc)
-		  			{
-		  				result=new String(result.substring(0,j));
-		  				System.out.println("GPU_CUR_FREQ : "+result);
-		  			}
-		  }
-		  catch(IOException exc)
-		  {
-
-		  }*/
           max.setText(getString(R.string.max_freq));
 		  max.append(" : "+max_freq/1000+" MHz");
 		  graphViews=new GraphView[NUMBER_OF_CORES];

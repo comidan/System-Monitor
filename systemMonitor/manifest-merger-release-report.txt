@@ -320,8 +320,6 @@ MERGED from SystemMonitor:changeLogLibrary:unspecified:9:5
 		ADDED from AndroidManifest.xml:73:9
 activity#com.dev.system.monitor.MainActivity
 ADDED from AndroidManifest.xml:74:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:77:13
 	android:label
 		ADDED from AndroidManifest.xml:76:13
 	android:name
